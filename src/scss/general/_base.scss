@@ -4,7 +4,8 @@ html {
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
+	color: $black;
 }
 
 ul {
@@ -45,14 +46,30 @@ ul {
 	&:hover {
 		filter: saturate(2.6);
 	}
+	@media (max-width: 370px) {
+		width: 20rem;
+		&-text {
+			display: none;
+		}
+	}
 }
 
 .h1 {
+	font-size: 2rem;
 	color: $black;
-	font-size: 4.2rem;
 	font-weight: 900;
-	line-height: 6.951rem;
 	text-transform: uppercase;
+
+	@include xs-block() {
+		font-size: 2.2rem;
+	}
+	@include sm-block() {
+		font-size: 3.2rem;
+	}
+	@include md-block() {
+		font-size: 4.2rem;
+		line-height: 6.951rem;
+	}
 }
 
 .row {

@@ -1,21 +1,128 @@
 header {
     background: $white url('../img/main-bg.webp') center / cover no-repeat;
-    height: 96.4rem;
-    
+    min-height: 96.4rem;
+    .typewrite {
+        display: block;
+        @include md(display, inline-block);
+        font-size: 3rem;
+        @include md(font-size, inherit);
+    }
 }
 .hero {
     @include row-flex();
-
     margin-top: 13rem;
-    &-left {
+
+    &-left,
+    &-right {
         @include col();
-        @include size(7);
+        @include size-md(12);
+    }
+    &-left {
+        @include size-lg(7);
+        @include size-xl(6);
+
+        z-index: 2;
         .h1 {
-            margin-bottom: 4.1rem; 
+            margin-bottom: 3.5rem; 
+            white-space: wrap;
+            @include lg(white-space, nowrap);
         }
     }
     &-right {
+        @include size-lg(5);
+        @include size-xl(6);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        z-index: 1;
+        .circles {          
+            opacity:0;
+            @include lg(opacity, 1);
+            .circle-1,
+            .circle-2,
+            .circle-3,
+            .circle-4,
+            .circle-5 {
+                border-radius: 50%;
+                opacity: 0.5;
+
+                position: absolute;
+                z-index: 0;
+            }
+            .circle-1 {
+                width: 6.3rem;
+                height: 6.3rem;
+                border: 0.3rem solid $primary;  
+
+                top: -.1vmax;
+                left: 0.6vmax;
+            }
+            .circle-2 {
+                width: 25.6rem;
+                height: 25.5rem;
+                background-color: $primary;
+
+                top: -3vmax;
+                right: 3vmax;
+            }
+            .circle-3 {
+                width: 25.6rem;
+                height: 25.5rem;
+                border: 0.3rem solid $primary;  
+
+                top: 3.5vmax;
+                right: -0.1vmax;
+            }
+            .circle-4 {
+                width: 14.4rem;
+                height: 14.4rem;
+                background-color: $primary;
+
+                top: 10.5vmax;
+                left: -1.3vmax;
+            }
+            .circle-5 {
+                width: 3.4rem;
+                height: 3.4rem;
+                border: 0.3rem solid $primary;  
+
+                top: 15.5vmax;
+                left: 7.4vmax;
+            }
+        }
+        picture,
+        img {
+            z-index: 1;
+        }
+    }
+}
+.main-features {
+    @include row-flex();
+
+    margin-top: 8.8rem;
+
+    .main-feature {
         @include col();
-        @include size(5);
+        @include size-xs(12);
+        @include size-md(4);    
+
+        .digit {
+            font-size: 3.6rem;
+            font-weight: 900;            
+        }
+        .text {
+            color: $gray-text;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                background-color: $primary;
+                height: 0.2rem;
+                width: 5.5rem;
+                margin: .5rem 0;
+            }
+        }
     }
 }

@@ -67,11 +67,25 @@
 					] ); 
 					?>
 					<a href="#" class="btn btn-inverse">Заказать звонок</a>
-					<a href="tel:<?=PHONE_HREF?>" class="phone-link"><?=PHONE?></a>
 
-					<div class="social-toggle">
-						<i class="fas fa-angle-down"></i>
+					<div class="pair">
+						<a href="tel:<?=PHONE_HREF?>" class="phone-link"><?=PHONE?></a>
+						<div class="social-toggle">
+							<i class="fas fa-angle-down"></i>
+						</div>
 					</div>
+
+					<svg class="mobile-menu-toggle ham ham6" viewBox="10 10 80 80" width="50" onclick="this.classList.toggle('active')">
+						<path
+							class="line top"
+							d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+						<path
+							class="line middle"
+							d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+						<path
+							class="line bottom"
+							d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+					</svg>
 				</div>
 				<div class="langs">
 					<a href="<?php echo get_home_url() ?>" class="lang ru active">RU</a>
@@ -90,13 +104,43 @@
 							<span class="wrap"></span>
 						</span>
 						сайты 
-						<span class="d-block">для бизнеса</span>
+						<span class="d-md-block">для бизнеса</span>
 					</h1>
 
 					<a href="#" class="btn btn-primary btn-shadow">Оставить заявку сейчас</a>
+
+					<div class="main-features">
+						<div class="main-feature">
+							<div class="digit"><span class="count" data-count="8">0</span>+</div>
+							<span class="text">Более 8 лет опыт работы</span>
+						</div>
+						<!-- /.main-feature -->
+						<div class="main-feature">
+							<div class="digit"><span class="count" data-count="300">0</span>+</div>
+							<span class="text">Более 300 проектов реализовано</span>
+						</div>
+						<!-- /.main-feature -->
+						<div class="main-feature">
+							<div class="digit"><span class="count" data-count="10">0</span></div>
+							<span class="text">10 профессионалов в команде</span>
+						</div>
+						<!-- /.main-feature -->
+					</div>
+					<!-- /.main-features -->
 				</div>
 				<div class="hero-right">
-
+					<div class="circles">
+						<div class="circle-1"></div>
+						<div class="circle-2"></div>
+						<div class="circle-3"></div>
+						<div class="circle-4"></div>
+						<div class="circle-5"></div>
+					</div>
+					<picture>
+						<source type="image/webp" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.webp">
+						<source type="image/png" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.png">
+						<img src="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.webp" >
+					</picture>
 				</div>
 			</div>
 		</div>

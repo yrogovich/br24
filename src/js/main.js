@@ -3,6 +3,27 @@
      * When DOM is ready
      */
     $(document).ready(function(){
+        // function counter() {
+            $('.count').each(function() {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');    
+
+                $({ countNum: $this.text()}).animate({
+                  countNum: countTo
+                }, {              
+                  duration: 3000,
+                  easing:'swing',
+                  step: function() {
+                    $this.text(Math.floor(this.countNum));
+                  },
+                  complete: function() {
+                    $this.text(this.countNum);
+                  }             
+                });                                      
+              });
+        // }
+        // setTimeout(counter, 1000);
+
         $('#menu_middle li:first-child').addClass('current active');
         
         $('#menu_middle li')
@@ -16,6 +37,27 @@
                 li$.removeClass('active');
                 li$.parent('ul').find('li.current').addClass('active');
             });
+
+        $.fn.parallax = function(resistance, mouse) {
+            $el = $(this);
+            TweenLite.to($el, 0.2, {
+                x: -((mouse.clientX - window.innerWidth / 2) / resistance),
+                y: -((mouse.clientY - window.innerHeight / 2) / resistance)
+            });
+            };
+            
+        $(document).mousemove(function(e) {
+            $(".circle-1").parallax(50, e);
+            $(".circle-2").parallax(20, e);
+            $(".circle-3").parallax(-25, e);
+            $(".circle-4").parallax(40, e);
+            $(".circle-5").parallax(80, e);
+        });
+
+        $(".mobile-menu-toggle").click(function() {
+            $(".mobile-navbar").toggleClass("active");
+            $('body').toggleClass("overflow");     
+        });
     });
 })(jQuery); // <----- jQuery no conflict wrapper
 
