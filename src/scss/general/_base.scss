@@ -1,0 +1,60 @@
+html {
+	font-size: 62.5%;
+  }
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.container {
+	@include container();
+	@include sm(max-width, 510px);
+	@include md(max-width, 690px);
+	@include lg(max-width, 930px);
+	@include xl(max-width, 1110px);
+}
+
+.container-full {
+	@include container-full();
+}
+
+.logo {
+	width: 25.6rem;
+	max-height: 5.2rem;
+	text-decoration: none;
+	transition: .3s;
+	svg &-img {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	svg#logo-img {
+		cursor: pointer!important;
+	}
+	&-text {
+		font-size: 1rem;
+		letter-spacing: 0.035rem;
+		display: block;
+		color: #838d99;
+	}
+	&:hover {
+		filter: saturate(2.6);
+	}
+}
+
+.h1 {
+	color: $black;
+	font-size: 4.2rem;
+	font-weight: 900;
+	line-height: 6.951rem;
+	text-transform: uppercase;
+}
+
+.row {
+	@include row-flex();
+}

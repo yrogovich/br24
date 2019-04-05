@@ -1,0 +1,117 @@
+.navbar {
+    a {
+        text-decoration: none;
+    }
+    &-top {
+        font-size: 1.2rem;
+        font-weight: 700;
+        background-color: $second;        
+        a {
+            color: $white;
+            display: inline-block;           
+            text-decoration: none;
+            padding: 14px 40px;
+            transition: .2s;
+            &:hover {
+                background-color: $primary;
+            }           
+        }
+        .menu li {
+            position: relative;
+            &:after {
+                content: '';
+                width: 1px;
+                height: 70%;
+                position: absolute;
+                top: 50%;
+                right: -1px;
+                transform: translate(0, -50%);
+                background-color: #576c7a;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-middle {
+        position: relative;
+        padding: 20px 0;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+        background: $white;
+        .phone-link {
+            color: $black;
+            font-size: 2.2rem;
+            font-weight: 700;
+            &:hover {
+                color: $second;
+            }
+        }
+        .menu {
+            li {
+                transition: .2s;
+                a {
+                    color: $second;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    position: relative;
+                    padding: 1.5rem;
+                    border-bottom: 1px solid $second;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: .3rem;
+                        background-color: $second;
+                        //animation: easeOut .4s;
+                    }
+                }
+                &.active {
+                    text-shadow: 1px 0 0 $second;
+                    a:before {
+                        width: 100%;
+                        animation: easeIn .6s;
+                    }   
+                }
+            }
+            @keyframes easeIn {
+                0% {
+                    width: 0;
+                }
+                50% {
+                    width: 80%;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            @keyframes easeOut {
+                0% {
+                    width: 100%;
+                    margin-left: 0;
+                }
+                50% {
+                    width: 20%;
+                    margin-left: 80%;
+                }
+                100% {
+                    width: 0;
+                    margin-left: 100%;
+                }
+            }
+        }
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;   
+    }
+    .menu {
+        display: flex;  
+    }
+}

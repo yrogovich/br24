@@ -1,0 +1,21 @@
+header {
+    background: $white url('../img/main-bg.webp') center / cover no-repeat;
+    height: 96.4rem;
+    
+}
+.hero {
+    @include row-flex();
+
+    margin-top: 13rem;
+    &-left {
+        @include col();
+        @include size(7);
+        .h1 {
+            margin-bottom: 4.1rem; 
+        }
+    }
+    &-right {
+        @include col();
+        @include size(5);
+    }
+}
