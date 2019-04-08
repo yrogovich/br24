@@ -247,14 +247,26 @@ svg .logo-img:hover {
 
 .btn.btn-primary {
   background-color: #1ac6df;
-  padding: 2.5rem 8.7rem 2.5rem 5rem;
+  padding: 2.5rem 5rem 2.5rem 3rem;
   border-radius: 3.5rem;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   position: relative;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+}
+
+@media screen and (min-width: 768px) {
+  .btn.btn-primary {
+    padding: 2.5rem 8.7rem 2.5rem 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn.btn-primary {
+    font-size: 1.6rem;
+  }
 }
 
 .btn.btn-primary:after {
@@ -263,15 +275,27 @@ svg .logo-img:hover {
   content: "\f061";
   position: absolute;
   top: 50%;
-  right: 5rem;
+  right: 2.5rem;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
 }
 
+@media screen and (min-width: 768px) {
+  .btn.btn-primary:after {
+    right: 5rem;
+  }
+}
+
 .btn.btn-primary:hover {
-  padding: 2.5rem 7.35rem 2.5rem 6.35rem;
+  padding: 2.5rem 4rem 2.5rem 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .btn.btn-primary:hover {
+    padding: 2.5rem 7.35rem 2.5rem 6.35rem;
+  }
 }
 
 .btn.btn-primary:hover:after {
@@ -889,7 +913,19 @@ header .typewrite {
       flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
-  margin-top: 13rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    margin-top: 13rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    text-align: left;
+  }
 }
 
 .hero-left, .hero-right {
@@ -941,11 +977,11 @@ header .typewrite {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   position: relative;
   z-index: 1;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 @media screen and (min-width: 992px) {
@@ -957,6 +993,17 @@ header .typewrite {
 @media screen and (min-width: 1200px) {
   .hero-right {
     width: calc(50% - 30px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-right {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
 }
 
@@ -1026,6 +1073,16 @@ header .typewrite {
   z-index: 1;
 }
 
+.hero-right picture {
+  margin: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-right picture {
+    margin: 0;
+  }
+}
+
 .main-features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1073,6 +1130,12 @@ header .typewrite {
   background-color: #1ac6df;
   height: 0.2rem;
   width: 5.5rem;
-  margin: .5rem 0;
+  margin: .5rem auto;
+}
+
+@media screen and (min-width: 768px) {
+  .main-features .main-feature .text:before {
+    margin: 0.5rem 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

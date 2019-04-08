@@ -10,7 +10,10 @@ header {
 }
 .hero {
     @include row-flex();
-    margin-top: 13rem;
+    @include lg(margin-top, 13rem);
+
+    text-align: center;
+    @include lg(text-align, left);
 
     &-left,
     &-right {
@@ -25,6 +28,7 @@ header {
         .h1 {
             margin-bottom: 3.5rem; 
             white-space: wrap;
+           
             @include lg(white-space, nowrap);
         }
     }
@@ -34,9 +38,13 @@ header {
 
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        @include lg-block() {
+            align-items: flex-end;
+            order: 0;
+        }
         position: relative;
         z-index: 1;
+        order: -1;
         .circles {          
             opacity:0;
             @include lg(opacity, 1);
@@ -94,7 +102,13 @@ header {
         }
         picture,
         img {
-            z-index: 1;
+            z-index: 1;          
+        }
+        picture {
+            margin: 20px;
+            @include lg-block() {
+                margin: 0;
+            }
         }
     }
 }
@@ -121,7 +135,8 @@ header {
                 background-color: $primary;
                 height: 0.2rem;
                 width: 5.5rem;
-                margin: .5rem 0;
+                margin: .5rem auto;
+                @include md(margin, .5rem 0);
             }
         }
     }
