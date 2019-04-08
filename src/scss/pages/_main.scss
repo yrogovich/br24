@@ -1,0 +1,93 @@
+#stock {
+    margin-top: 15rem;
+    @include lg(margin-top, -14rem);
+    .h2 {
+        top: -12rem;
+    }
+}
+.section {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-container {
+    .banner {
+        position: relative;
+        background: linear-gradient(90deg, #038afe, #245ad4);
+        box-sizing: border-box;
+        width: 100%;
+        border: 5px solid $primary;
+        border-radius: 20px;
+
+        @include row-flex();
+        margin-left: 0;
+        margin-right: 0;
+        align-items: center;
+        box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.1);
+
+        .col-left {
+            @include col();
+            @include size-sm(12);
+            @include size-md(6);
+            @include size-lg(7);
+
+            display: none;
+            @include sm(display, block);
+
+            margin-left: 0;
+            img, picture {
+                border-radius: 20px 0 0 20px;
+            }
+        }
+        .col-right {
+            @include col();
+            @include size-sm(12);
+            @include size-md(6);
+            @include size-lg(5);
+
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .banner-header {
+            color: $white;
+            font-weight: 900;
+        
+            font-size: 2.6rem;
+            @include sm-block {
+                font-size: 3.6rem;
+                line-height: 4.6rem;
+            }
+        }
+        .banner-text {
+            color: #a3c4fe;
+            margin: 2.6rem 0;
+            line-height: 2.4rem;
+        }
+        .bage {
+            position: absolute;
+            top: 0rem;
+            right: -0rem;
+            @include sm-block() {
+                top: -3rem;
+                right: -3.5rem;
+            }      
+            @media (max-width: 359px) {
+                display: none;
+            }     
+        }
+    }
+}
+.warning-text {
+    color: #ff0d15;
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+
+    @include sm-block() {
+        text-align: left;
+        font-size: 2.4rem;
+        line-height: 2rem;
+        margin: 1.3rem 0;
+    }
+}

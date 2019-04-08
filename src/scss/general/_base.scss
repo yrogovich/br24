@@ -72,6 +72,22 @@ ul {
 	}
 }
 
+.h2 {
+	position: absolute;
+	top: 10rem;
+	left: 50%;
+	transform: translate(-50%,0);
+	color: #f0f0f0;
+	font-size: 7rem;
+	@include sm(font-size, 13rem);
+	@include md(font-size, 17rem);
+	@include lg(font-size, 20rem);
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: -1;
+}
+
 .row {
 	@include row-flex();
 }

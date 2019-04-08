@@ -1,6 +1,7 @@
 header {
     background: $white url('../img/main-bg.webp') center / cover no-repeat;
-    min-height: 96.4rem;
+    min-height: 80.4rem;
+    @include sm(min-height, 96.4rem);
     .typewrite {
         display: block;
         @include md(display, inline-block);
@@ -115,7 +116,8 @@ header {
 .main-features {
     @include row-flex();
 
-    margin-top: 8.8rem;
+    margin: 4rem 0;
+    @include lg(margin-top, 8.8rem 0);
 
     .main-feature {
         @include col();
