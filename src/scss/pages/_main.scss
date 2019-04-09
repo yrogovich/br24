@@ -1,13 +1,19 @@
 #stock {
-    margin-top: 15rem;
-    @include lg(margin-top, -14rem);
+    margin-top: 8.5rem;
+    margin-bottom: 0;
+    @include lg-block() {
+        margin-top: -19rem;
+        //margin-top: -14rem;
+        margin-bottom: -5rem;
+    };
     .h2 {
-        top: -12rem;
+        top: -6rem;
     }
 }
 .section {
     position: relative;
     z-index: 1;
+    padding-top: 4.4rem;
     padding-bottom: 5rem;
 }
 
@@ -90,21 +96,6 @@
         font-size: 2.4rem;
         line-height: 2rem;
         margin: 1.3rem 0;
-    }
-}
-
-.h2-primary {
-    padding-top: 7rem;
-    margin-bottom: 2.5rem;
-
-    text-transform: uppercase;
-    font-size: 1.9rem;
-    @include sm(font-size, 2.4rem);
-    font-weight: 900;
-    text-align: center;
-    &:after {
-        content: url('../img/icons/h2-dots.svg');
-        display: block;
     }
 }
 
@@ -198,7 +189,7 @@
     }
 }
 .links {
-    margin: 1rem 0;
+    //margin: 1rem 0;
     li {
         margin: .5rem 0;
     }
@@ -209,6 +200,33 @@
         &:hover {
             text-decoration: none;
             color: $primary;
+        }
+    }
+}
+
+// Cases
+#cases {
+}
+
+.cases-container {
+    @include row-flex();
+    justify-content: space-between;
+
+    .case-card {
+        @include col();
+        @include size-md(4);
+
+        max-width: 340px;
+        width: 100%;
+        min-height: 333px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        background-color: $white;
+        margin-bottom: 2.5rem;
+        transition: .3s;
+
+        
+        &:hover {
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
         }
     }
 }

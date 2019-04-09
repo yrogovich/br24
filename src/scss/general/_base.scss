@@ -79,7 +79,7 @@ ul {
 .h2 {
 	position: absolute;
 	top: 4rem;
-	@include sm(top, -1rem);
+	@include sm(top, 5rem);
 	left: 50%;
 	transform: translate(-50%,0);
 	color: #f0f0f0;
@@ -91,6 +91,25 @@ ul {
 	text-transform: uppercase;
 	text-align: center;
 	z-index: -1;
+}
+.gray .h2 {
+	color: $white;
+}
+
+.h2-primary {
+	padding-top: 2.8rem;
+	@include md(padding-top, 7.8rem);
+    margin-bottom: 2.5rem;
+
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    @include sm(font-size, 2.4rem);
+    font-weight: 900;
+    text-align: center;
+    &:after {
+        content: url('../img/icons/h2-dots.svg');
+        display: block;
+    }
 }
 
 .row {

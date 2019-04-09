@@ -35,9 +35,6 @@ get_header();
     <div class="container">
         <div class="h2">Услуги</div>
         <div class="h2-primary">Мы умеем лучше всего:</div>
-        <!-- <div class="img-wrapper">
-            <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/banner.png" alt="spinner">
-        </div> -->
         <div class="service-container">
             <div class="service-card">
                 <div class="row">
@@ -159,6 +156,81 @@ get_header();
     </div>
 </div>
 <!-- /#services.section -->
+<div class="section gray" id="cases">
+    <div class="container">
+        <div class="h2">Кейсы</div>
+        <div class="h2-primary">Наши проекты</div>
+       
+        <div class="cases-container">
+            <div class="case-card">
+                <div class="image-wrapper">
+                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
+                </div>
+                <div class="text-wrapper">
+                    <div class="title">Маркизы и перголы в Москве</div>
+                    <div class="hr"></div>
+                    <div class="pair">
+                        <div class="col">
+                            <span class="gray-text">Сайт каталог</span>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!-- /.case-card -->
+            <div class="case-card">
+                <div class="image-wrapper">
+                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
+                </div>
+                <div class="text-wrapper">
+                    <div class="title">Маркизы и перголы в Москве</div>
+                    <div class="hr"></div>
+                    <div class="pair">
+                        <div class="col">
+                            <span class="gray-text">Сайт каталог</span>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!-- /.case-card -->
+            <div class="case-card">
+                <div class="image-wrapper">
+                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
+                </div>
+                <div class="text-wrapper">
+                    <div class="title">Маркизы и перголы в Москве</div>
+                    <div class="hr"></div>
+                    <div class="pair">
+                        <div class="col">
+                            <span class="gray-text">Сайт каталог</span>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!-- /.case-card -->
+            <div class="case-card">
+                <div class="image-wrapper">
+                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
+                </div>
+                <div class="text-wrapper">
+                    <div class="title">Маркизы и перголы в Москве</div>
+                    <div class="hr"></div>
+                    <div class="pair">
+                        <div class="col">
+                            <span class="gray-text">Сайт каталог</span>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!-- /.case-card -->
+        </div>
+        <!-- /.cases-container -->
+    </div>
+</div>
+<!-- /#cases.section -->
 
 
 <?php get_footer(); ?>
