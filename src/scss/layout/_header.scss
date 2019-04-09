@@ -117,7 +117,7 @@ header {
     @include row-flex();
 
     margin: 4rem 0;
-    @include lg(margin-top, 8.8rem 0);
+    @include lg(margin-top, 8.8rem);
 
     .main-feature {
         @include col();

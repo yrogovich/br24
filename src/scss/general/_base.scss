@@ -1,11 +1,15 @@
 html {
-	font-size: 62.5%;
+	font-size: 62.5%;	
   }
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.4rem;
 	color: $black;
+	&::selection {
+		//color: #ff0; /* Цвет текста */
+		background: #000; /* Цвет фона */
+	}
 }
 
 ul {
@@ -74,7 +78,8 @@ ul {
 
 .h2 {
 	position: absolute;
-	top: 10rem;
+	top: 4rem;
+	@include sm(top, -1rem);
 	left: 50%;
 	transform: translate(-50%,0);
 	color: #f0f0f0;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------------------
  >> TABLE OF CONTENTS:
 	# Import vendors
@@ -90,6 +91,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   color: #2f333e;
+}
+
+body::-moz-selection {
+  background: #000;
+  /* Цвет фона */
+}
+
+body::selection {
+  background: #000;
+  /* Цвет фона */
 }
 
 ul {
@@ -197,7 +208,7 @@ svg .logo-img:hover {
 
 .h2 {
   position: absolute;
-  top: 10rem;
+  top: 4rem;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -207,6 +218,12 @@ svg .logo-img:hover {
   text-transform: uppercase;
   text-align: center;
   z-index: -1;
+}
+
+@media screen and (min-width: 576px) {
+  .h2 {
+    top: -1rem;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -278,27 +295,16 @@ svg .logo-img:hover {
 }
 
 .btn.btn-primary {
+  padding: 1.5rem 4.7rem 1.5rem 2.4rem;
   background-color: #1ac6df;
-  padding: 2.5rem 5rem 2.5rem 3rem;
-  border-radius: 3.5rem;
+  border-radius: 2.4rem;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   position: relative;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
-}
-
-@media screen and (min-width: 1200px) {
-  .btn.btn-primary {
-    padding: 2.5rem 8.7rem 2.5rem 5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .btn.btn-primary {
-    font-size: 1.7rem;
-  }
+  vertical-align: sub;
 }
 
 .btn.btn-primary:after {
@@ -307,32 +313,60 @@ svg .logo-img:hover {
   content: "\f061";
   position: absolute;
   top: 50%;
-  right: 2.5rem;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translate(0, -40%);
+          transform: translate(0, -40%);
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
-}
-
-@media screen and (min-width: 1200px) {
-  .btn.btn-primary:after {
-    right: 5rem;
-  }
+  right: 2.5rem;
 }
 
 .btn.btn-primary:hover {
-  padding: 2.5rem 4rem 2.5rem 4rem;
-}
-
-@media screen and (min-width: 992px) {
-  .btn.btn-primary:hover {
-    padding: 2.5rem 7.35rem 2.5rem 6.35rem;
-  }
+  padding: 1.5rem 3.6rem 1.5rem 3.5rem;
 }
 
 .btn.btn-primary:hover:after {
   right: -1rem;
   opacity: 0;
+}
+
+.btn.btn-lg {
+  padding: 2.5rem 5rem 2.5rem 3rem;
+  border-radius: 3.5rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .btn.btn-lg {
+    padding: 2.5rem 8.7rem 2.5rem 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn.btn-lg {
+    font-size: 1.7rem;
+  }
+}
+
+.btn.btn-lg:after {
+  right: 2.5rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .btn.btn-lg:after {
+    right: 5rem;
+  }
+}
+
+.btn.btn-lg:hover {
+  padding: 2.5rem 4rem 2.5rem 4rem;
+}
+
+@media screen and (min-width: 992px) {
+  .btn.btn-lg:hover {
+    padding: 2.5rem 7.35rem 2.5rem 6.35rem;
+  }
 }
 
 .btn.btn-shadow {
@@ -1148,7 +1182,7 @@ header .typewrite {
 
 @media screen and (min-width: 992px) {
   .main-features {
-    margin-top: 8.8rem 0;
+    margin-top: 8.8rem;
   }
 }
 
@@ -1214,6 +1248,7 @@ header .typewrite {
 .section {
   position: relative;
   z-index: 1;
+  padding-bottom: 5rem;
 }
 
 .banner-container .banner {
@@ -1259,7 +1294,7 @@ header .typewrite {
 
 @media screen and (min-width: 768px) {
   .banner-container .banner .col-left {
-    width: calc(50% - 30px);
+    width: calc(0% - 30px);
   }
 }
 
@@ -1297,7 +1332,7 @@ header .typewrite {
 
 @media screen and (min-width: 768px) {
   .banner-container .banner .col-right {
-    width: calc(50% - 30px);
+    width: calc(66.66667% - 30px);
   }
 }
 
@@ -1360,5 +1395,217 @@ header .typewrite {
     line-height: 2rem;
     margin: 1.3rem 0;
   }
+}
+
+.h2-primary {
+  padding-top: 7rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .h2-primary {
+    font-size: 2.4rem;
+  }
+}
+
+.h2-primary:after {
+  content: url("../img/icons/h2-dots.svg");
+  display: block;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.service-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .service-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.service-container .service-card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100%;
+  max-width: 53rem;
+  min-height: 22rem;
+  -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  margin-bottom: 4.5rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media screen and (min-width: 768px) {
+  .service-container .service-card {
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .service-container .service-card {
+    width: calc(50% - 30px);
+  }
+}
+
+.service-container .service-card:hover {
+  -webkit-box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.service-container .service-card:hover .col-left img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.service-container .service-card .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+  padding: 2.5rem 0 1.5rem 0;
+}
+
+.service-container .service-card .row .col-left {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) {
+  .service-container .service-card .row .col-left {
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .service-container .service-card .row .col-left {
+    width: calc(41.66667% - 30px);
+  }
+}
+
+.service-container .service-card .row .col-left img {
+  width: 15rem;
+  height: 15rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 10px 0;
+}
+
+.service-container .service-card .row .col-right {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) {
+  .service-container .service-card .row .col-right {
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .service-container .service-card .row .col-right {
+    width: calc(58.33333% - 30px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service-container .service-card .row .col-right {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.service-container .service-card .row .col-right .head-text {
+  color: #1ac6df;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-container .service-card .row .col-right .btn {
+  margin: 1.6rem 0;
+  opacity: 0.5;
+}
+
+.service-container .service-card .row .col-right .btn:hover {
+  opacity: 1;
+}
+
+.links {
+  margin: 1rem 0;
+}
+
+.links li {
+  margin: .5rem 0;
+}
+
+.links a {
+  font-size: 1.3rem;
+  color: #2f333e;
+  text-decoration: underline;
+}
+
+.links a:hover {
+  text-decoration: none;
+  color: #1ac6df;
 }
 /*# sourceMappingURL=main.css.map */

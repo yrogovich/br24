@@ -107,7 +107,7 @@
 						<span class="d-md-block">для бизнеса</span>
 					</h1>
 
-					<a href="#" class="btn btn-primary btn-shadow">Оставить заявку сейчас</a>
+					<a href="#" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
 
 					<div class="main-features">
 						<div class="main-feature">
@@ -139,7 +139,7 @@
 					<picture>
 						<source type="image/webp" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.webp">
 						<source type="image/png" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.png">
-						<img src="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.webp" >
+						<img src="<?php bloginfo('template_url') ?>/src/img/main-page/agronovia.webp" alt="Создаем сайты для бизнеса">
 					</picture>
 				</div>
 			</div>
