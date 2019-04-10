@@ -1,5 +1,6 @@
 header {
-    background: $white url('../img/main-bg.webp') center / cover no-repeat;
+    background: $white;
+    @include sm(background, $white url('../img/main-bg.webp') center / cover no-repeat);
     min-height: 80.4rem;
     @include sm(min-height, 96.4rem);
     .typewrite {

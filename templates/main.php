@@ -172,7 +172,10 @@ get_header();
                     <div class="pair">
                         <div class="col">
                             <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
                         </div>
                     </div>
                 </div>               
@@ -188,7 +191,10 @@ get_header();
                     <div class="pair">
                         <div class="col">
                             <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
                         </div>
                     </div>
                 </div>               
@@ -204,7 +210,10 @@ get_header();
                     <div class="pair">
                         <div class="col">
                             <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
                         </div>
                     </div>
                 </div>               
@@ -220,7 +229,48 @@ get_header();
                     <div class="pair">
                         <div class="col">
                             <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru </a>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!-- /.case-card -->
+            <div class="case-card">
+                <div class="image-wrapper">
+                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
+                </div>
+                <div class="text-wrapper">
+                    <div class="title">Маркизы и перголы в Москве</div>
+                    <div class="hr"></div>
+                    <div class="pair">
+                        <div class="col">
+                            <span class="gray-text">Сайт каталог</span>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <!-- /.case-card -->
+            <div class="case-card">
+                <div class="image-wrapper">
+                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
+                </div>
+                <div class="text-wrapper">
+                    <div class="title">Маркизы и перголы в Москве</div>
+                    <div class="hr"></div>
+                    <div class="pair">
+                        <div class="col">
+                            <span class="gray-text">Сайт каталог</span>
+                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
                         </div>
                     </div>
                 </div>               
@@ -231,6 +281,39 @@ get_header();
     </div>
 </div>
 <!-- /#cases.section -->
+<div class="section" id="contacts">
+    <div class="container">
+        <div class="h2">Контакты</div>
+
+        <div class="contacts-card">
+            <div class="col-left">  
+                <div class="title">Компания «Бизнес Рост»</div>
+                <p class="subtitile">Агенство эффективного интернет-маркетинга. Работаем в России и Беларуси уже более 8 лет.</p>
+                <div class="hr"></div>
+                <div class="title icon-map">Адрес</div>
+                <p class="margin">Беларусь, г. Гомель, ул. Советская, 61. Офис 206</p>
+                <div class="title icon-phone">Телефон</div>
+                <a class="margin phone-link" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
+                <div class="hr"></div>
+
+                <p class="bold">Остались вопросы?</p>
+                <p class="gray-text">Задайте их нашему специалисту</p>
+                <a href="#" class="btn btn-primary btn-lg btn-shadow i-msg">Бесплатная консультация</a>
+
+                <div class="social-links">
+                    <a href="#" class="btn btn-viber">Viber</a>
+                    <a href="#" class="btn btn-whatsapp">WhatsApp</a>
+                    <a href="#" class="btn btn-telegram">Telegram</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=53690dda-45ae-4b14-bdab-50cbe59d03e1"></script> -->
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#contacts.section -->
 
 
 <?php get_footer(); ?>

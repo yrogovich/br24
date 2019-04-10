@@ -3,6 +3,23 @@
      * When DOM is ready
      */
     $(document).ready(function(){
+        setTimeout(function(){
+            var elem = document.createElement('script');
+            elem.type = 'text/javascript';
+            elem.src = '//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&apikey=53690dda-45ae-4b14-bdab-50cbe59d03e1&onload=getYaMap';
+            document.getElementsByTagName('body')[0].appendChild(elem);
+        }, 2000);
+        
+        function getYaMap(){
+            var myMap = new ymaps.Map("map",{center: [30.325,59.935],zoom: 13});
+            ymaps.geocode("Санкт-Петербург, ул. Невский проспект, 28").then(function (res) {
+                var coord = res.geoObjects.get(0).geometry.getCoordinates();
+                var myPlacemark = new ymaps.Placemark(coord);
+                myMap.geoObjects.add(myPlacemark);
+                myMap.setCenter(coord);                    
+            });
+        }
+
         // function counter() {
             $('.count').each(function() {
                 var $this = $(this),
@@ -72,6 +89,15 @@
             console.log('error loading ' + element.data('src'));
         }
     });
+
+    //YMap lazy
+
+    function showYaMaps(){
+        ymaps.ready(init);
+        
+        
+    }
+
 
 })(jQuery); // <----- jQuery no conflict wrapper
 
