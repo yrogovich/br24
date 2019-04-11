@@ -309,6 +309,23 @@ get_header();
             <div class="col-right">
                 <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=53690dda-45ae-4b14-bdab-50cbe59d03e1"></script> -->
                 <div id="map"></div>
+                <!--<script>
+                    ymaps.ready(init);
+                    function init() {
+                        var myMap = new ymaps.Map('map', {
+                                center: [52.440501, 31.004274],
+                                zoom: 17,
+                                controls: []
+                            });
+                        myMap.geoObjects
+                            .add(new ymaps.Placemark([52.440501, 31.004274], {
+                                balloonContent: 'Офис «Бизнес Рост»',
+                                iconCaption: 'Советская улица, 61'
+                            }, {
+                                preset: 'islands#redIcon'
+                            }));
+                    }
+                </script> -->
             </div>
         </div>
     </div>

@@ -126,8 +126,9 @@ p {
 	padding: 0;
 	margin: 0;
 	min-height: 400px;
+	background: transparent url('../img/main-page/map.webp') center / cover no-repeat;
 }
-ymaps {
+ymaps,#map {
 	border-radius: 0 0 11px 11px;
 	@include lg(border-radius, 0 11px 11px 0);   
 }

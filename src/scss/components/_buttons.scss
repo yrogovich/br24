@@ -99,6 +99,7 @@
         box-shadow: 0 1.1rem 2.4rem rgba(0, 202, 255, 0.6);
         &:hover {
             box-shadow: 1px 5px 15px 0px rgba(0, 202, 255, 0.6);
+            filter: saturate(140%);
         }
         &:active {
             box-shadow: 1px 3px 5px 0px rgba(0, 202, 255, 0.6);

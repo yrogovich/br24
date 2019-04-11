@@ -3,22 +3,30 @@
      * When DOM is ready
      */
     $(document).ready(function(){
-        setTimeout(function(){
-            var elem = document.createElement('script');
-            elem.type = 'text/javascript';
-            elem.src = '//api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&apikey=53690dda-45ae-4b14-bdab-50cbe59d03e1&onload=getYaMap';
-            document.getElementsByTagName('body')[0].appendChild(elem);
-        }, 2000);
-        
-        function getYaMap(){
-            var myMap = new ymaps.Map("map",{center: [30.325,59.935],zoom: 13});
-            ymaps.geocode("Санкт-Петербург, ул. Невский проспект, 28").then(function (res) {
-                var coord = res.geoObjects.get(0).geometry.getCoordinates();
-                var myPlacemark = new ymaps.Placemark(coord);
-                myMap.geoObjects.add(myPlacemark);
-                myMap.setCenter(coord);                    
-            });
-        }
+        // Lazyloading
+        $('.lazy').Lazy({
+            // your configuration goes here
+            scrollDirection: 'vertical',
+            effect: 'fadeIn',
+            effectTime: 1000,
+            //threshold: 0,
+            visibleOnly: true,
+            onError: function(element) {
+                console.log('error loading ' + element.data('src'));
+            }
+        });
+
+        //  Show ymaps on scroll
+        var point = $('#services');
+        var pointTop = point.offset().top;
+        var handler = function () {
+            var windowTop = $(this).scrollTop();
+            if (windowTop > pointTop) {
+                $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac7d87e8430b4178367d02f242d76645b79b73607df715017ad24b72553e52d29&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>');
+                $(window).unbind( "scroll", handler );
+            }
+        };
+        $(window).bind( "scroll", handler );  
 
         // function counter() {
             $('.count').each(function() {
@@ -76,28 +84,6 @@
             $('body').toggleClass("overflow");     
         });
     });
-
-    // Lazyloading
-    $('.lazy').Lazy({
-        // your configuration goes here
-        scrollDirection: 'vertical',
-        effect: 'fadeIn',
-        effectTime: 1000,
-        //threshold: 0,
-        visibleOnly: true,
-        onError: function(element) {
-            console.log('error loading ' + element.data('src'));
-        }
-    });
-
-    //YMap lazy
-
-    function showYaMaps(){
-        ymaps.ready(init);
-        
-        
-    }
-
 
 })(jQuery); // <----- jQuery no conflict wrapper
 

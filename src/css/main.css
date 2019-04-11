@@ -294,14 +294,15 @@ svg .logo-img:hover {
   padding: 0;
   margin: 0;
   min-height: 400px;
+  background: transparent url("../img/main-page/map.webp") center/cover no-repeat;
 }
 
-ymaps {
+ymaps, #map {
   border-radius: 0 0 11px 11px;
 }
 
 @media screen and (min-width: 992px) {
-  ymaps {
+  ymaps, #map {
     border-radius: 0 11px 11px 0;
   }
 }
@@ -479,6 +480,8 @@ ymaps {
 .btn.btn-shadow:hover {
   -webkit-box-shadow: 1px 5px 15px 0px rgba(0, 202, 255, 0.6);
           box-shadow: 1px 5px 15px 0px rgba(0, 202, 255, 0.6);
+  -webkit-filter: saturate(140%);
+          filter: saturate(140%);
 }
 
 .btn.btn-shadow:active {
@@ -1374,19 +1377,19 @@ footer .footer-menu a {
 footer .link:after,
 footer .footer-menu a:after {
   display: inline-block;
-  margin-left: .5rem;
+  margin-left: .3rem;
   font-family: "Font Awesome 5 Free";
   font-size: 1rem;
   font-weight: 900;
   content: "\f061";
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 
 footer .link:hover:after,
 footer .footer-menu a:hover:after {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
   opacity: 0;
 }
 
@@ -2102,9 +2105,16 @@ footer .footer-row .btn-inverse-2 {
   width: 8.5rem;
   margin-top: .7rem;
   margin-right: .8rem;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 
 .contacts-card .social-links .btn:before {
   margin-right: .5rem;
+}
+
+.contacts-card .social-links .btn:hover {
+  -webkit-filter: saturate(190%);
+          filter: saturate(190%);
 }
 /*# sourceMappingURL=main.css.map */
