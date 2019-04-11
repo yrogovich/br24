@@ -1,12 +1,16 @@
 footer {
     background-color: #08464f;
-    min-height: 26.3rem;
-    color: #fff;
+    min-height: 26rem;
+    color: #79acb3;
     .logo-text {
         color: $white;
         font-size: 1rem;
         letter-spacing: 0.035rem;
         white-space: nowrap;
+    }
+    a {
+        color: #79acb3;
+        text-decoration: none;
     }
     .link,
     .footer-menu a {
@@ -29,6 +33,35 @@ footer {
             }
         }
     }
+    .contact {
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: block;
+        &:before {
+            content: '';
+            display: inline-block;
+            margin: 1rem 1.2rem 1rem 0;
+            font-family: "Font Awesome 5 Free"; 
+            font-size: 1.6rem;
+            font-weight: 900; 
+        }
+        &.icon-map:before {
+            content: "\f3c5";
+        }
+        &.icon-mail:before {
+            content: "\f0e0";
+        }
+        &.icon-phone:before {
+            content: "\f095";
+        }
+    }
+    span.contact{
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-indent: -12px;
+        margin-left: 2.5rem;
+        line-height: .8;
+    }
     ul li {
         margin: 1rem 0;
     }
@@ -36,29 +69,41 @@ footer {
         font-size: 1.8rem;
         font-weight: 700;
         text-transform: uppercase;
-        // Text style for "Услуги"
         letter-spacing: 0.09rem;
         margin-bottom: 1.5rem;
+        color: $white;
     }
     .footer-row {
-        padding: 4rem 0;
+        padding-top: 3rem;
+        @include lg(padding, 3rem 0);
 
         @include row-flex();
+        justify-content: center;
+        @include lg(justify-content, space-between);
+        
         .col {
             @include col();
-            @include size(3);
+            @include size(12);
+            @include size-lg(3);
             &:first-child {
-                margin-left: 0;
+                @include lg(margin-left, 0);
+            }
+            margin: 1rem 1.5rem;
+
+            &:last-child {
+                margin-bottom: 3rem;
             }
         }
         .col-divider {
             @include col();
-            @include size(1);
+            @include size(0);
+            @include size-lg(1);
 
             position: relative;
+            
 
             &:before {
-                content: '';
+                @include lg(content, '');
                 display: inline-block;
                 margin-left: 50%;
                 transform: translate(-50%,0);
@@ -70,12 +115,66 @@ footer {
         }
         .col-social {
             @include col();
-            @include size(1);
+            @include size(12);
+            @include size-lg(1);
 
-            margin: -4rem 0;
+            display: flex;
+            @include lg(flex-direction, column);
+            @include lg(margin, -3rem 0);
         }
         .btn-inverse-2 {
             margin: 1.6rem 0;
         }
+    }
+    .copyrights {
+        background-color: $footer-deep;
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        color: #fff;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+        .copyright {
+            opacity: 0.3;
+        }
+        .privacy-politics {
+            color: #fff;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+            &:active {
+                filter: brightness(80%);
+            }
+        }
+    }
+}
+
+.btn-container {
+    min-height: 6.5rem;
+    flex: 1 1 6.5rem;
+    background-color: #0c434a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: $white;
+    font-size: 2.4rem;
+    text-decoration: none;
+    
+    &:hover {
+        filter: saturate(190%) contrast(120%);
+    }
+    &.facebook {
+        background-color: #0a545e;
+    }
+    &.instagram {
+        background-color: #208a98;
+    }
+    &.youtube {
+        background-color: #07a9bf;
     }
 }

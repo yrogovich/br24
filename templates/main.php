@@ -281,6 +281,38 @@ get_header();
     </div>
 </div>
 <!-- /#cases.section -->
+<div class="section lazy" id="about-company" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/br-background.jpg">
+    <div class="container">
+        <div class="h3">Коротко о нашей компании</div>
+        <div class="primary-text">Компания «БИЗНЕС РОСТ» профессионально занимается продвижением и рекламой с 2008 года.</div>
+        <p>Мы готовы предложить максимально эффективные решения в области интернет продаж каждому клиенту, сохраняя при этом выгодную для клиентов стоимость услуг. Мы работаем профессионально, четко и очень быстро.  Мы ценим наших клиентов и готовы сотрудничать с представителями крупного и малого бизнеса. <strong>У нас можно заказать лендинг.</strong> Свяжитесь с нами прямо сейчас, доверьте рост ваших продаж профессионалам!</p>
+
+        <div class="main-features">
+            <div class="main-feature">
+                <div class="digit"><span class="count" data-count="8">0</span>+</div>
+                <span class="text">Более 8 лет опыт работы</span>
+            </div>
+            <!-- /.main-feature -->
+            <div class="main-feature">
+                <div class="digit"><span class="count" data-count="300">0</span>+</div>
+                <span class="text">Более 300 проектов реализовано</span>
+            </div>
+            <!-- /.main-feature -->
+            <div class="main-feature">
+                <div class="digit"><span class="count" data-count="10">0</span></div>
+                <span class="text">10 профессионалов в команде</span>
+            </div>
+            <!-- /.main-feature -->
+        </div>
+        <!-- /.main-features -->
+
+        <div class="pair">
+            <div class="big-text"><span class="primary">Создаем</span> сайты для бизнеса</div>
+            <a href="#" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
+        </div>
+    </div>
+</div>
+<!-- /#about-company.section -->
 <div class="section" id="contacts">
     <div class="container">
         <div class="h2">Контакты</div>
@@ -307,25 +339,7 @@ get_header();
                 </div>
             </div>
             <div class="col-right">
-                <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=53690dda-45ae-4b14-bdab-50cbe59d03e1"></script> -->
                 <div id="map"></div>
-                <!--<script>
-                    ymaps.ready(init);
-                    function init() {
-                        var myMap = new ymaps.Map('map', {
-                                center: [52.440501, 31.004274],
-                                zoom: 17,
-                                controls: []
-                            });
-                        myMap.geoObjects
-                            .add(new ymaps.Placemark([52.440501, 31.004274], {
-                                balloonContent: 'Офис «Бизнес Рост»',
-                                iconCaption: 'Советская улица, 61'
-                            }, {
-                                preset: 'islands#redIcon'
-                            }));
-                    }
-                </script> -->
             </div>
         </div>
     </div>

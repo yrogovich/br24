@@ -47,6 +47,9 @@
 				<div class="col-divider"></div>
 				<div class="col">
 					<div class="title">Обратная связь</div>
+					<a class="contact icon-phone" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
+					<a class="contact icon-mail" href="mailto:<?=EMAIL?>"><?=EMAIL?></a>
+					<span class="contact icon-map"><?=ADRESS?></span>
 				</div>
 				<div class="col-social">
 					<a class="btn-container vk" href="#">
@@ -64,6 +67,13 @@
 				</div>
 			</div>
 		</div>
+		<div class="copyrights">
+			<div class="container">
+				<span class="copyright">Copyright © 2010 — <?php echo date('Y'); ?>  Компания «БИЗНЕС РОСТ» | Агенство эффективного интернет-маркетинга</span>
+				<a href="#" class="privacy-politics">Политика конфедециальности</a>
+			</div>
+		</div>
+		<!-- /.copyrights -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

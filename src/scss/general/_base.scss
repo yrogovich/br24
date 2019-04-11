@@ -115,6 +115,10 @@ p {
         display: block;
     }
 }
+.h3 {
+	font-size: 2.2rem;
+	font-weight: 700;
+}
 
 .row {
 	@include row-flex();
