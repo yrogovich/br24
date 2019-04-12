@@ -55,7 +55,7 @@
 
             margin: 20px auto;
             padding: 20px;
-        }
+        }   
         .banner-header {
             color: $white;
             font-weight: 900;
@@ -208,6 +208,7 @@
 
 // Cases
 #cases {
+    padding-bottom: 13rem;
 }
 
 .cases-container {
@@ -288,6 +289,199 @@
                 transform: scale(1.1);
             }
         }
+    }
+}
+#reviews { 
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    padding-bottom: 11rem;
+}
+.link {
+    color: $primary;
+    &:hover {
+        text-decoration: none;
+    }
+    &:active {
+        filter: brightness(90%);
+    }
+}
+.rewiews {
+    min-height: 46.2rem;
+    background-color: #3b5977;
+    color: $white;
+    margin: 59px 0;
+
+    @include row-flex();
+
+    @include md-block() {
+        margin-left: -50px;
+        margin-right: -50px;
+    }
+    .rewiew {
+        @include col();
+        @include size-md(12);
+        @include size-lg(5);
+        @include size-xl(7);
+
+        
+        @include md(padding, 4.5rem);
+        padding: 4.5rem 0;
+        
+        .pair {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #7c9dbe;
+            .title {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+            .navigation {
+                display: flex;
+                align-items: center;
+                .pair-2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .arrow-right,
+                .arrow-left {
+                    padding: 0 1.5rem;
+                    &:before {
+                        display: inline-block;
+                        content: url('../img/reviews/arrow.png')
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        &:before {
+                            filter: brightness(130%);
+                        }
+                    }
+                }
+                .arrow-right{
+                    padding: 0 1rem;
+                    &:before {
+                        content: url('../img/reviews/arrow-right.png');
+
+                    }
+                }
+                .digits {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: baseline;
+                    font-size: 1.6rem;
+                    color: #7c9dbe;
+                    .digit {
+                        font-size: 3.6rem;
+                        color: $white;
+                    }
+                }
+                .text {
+                    display: block;
+                    color: #7c9dbe;
+                    font-size: 1.3rem;
+                    margin-top: -3px;
+                }
+            }
+        }
+        .paragraph {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+        }
+    }
+    #slider {
+        @include col();
+        @include size-md(0);
+        @include size-lg(7);
+        @include size-xl(5);
+
+        display: none;
+        @include lg(display, block);
+    }
+}
+#slider {
+    img {
+        cursor: pointer; /* not needed if you wrap carousel items in links */
+        width: 35.9rem;
+        height: 51.3rem;
+        box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+    }
+}
+
+.videos {
+    @include row-flex();
+
+    margin: 90px auto 170px;
+    .video-card {
+        @include col();
+        @include size(12);
+        @include size-md(6);
+        .youtube {
+            max-height: 30.4rem;
+        }
+        .text {
+            background-color: $white;
+            padding: 2rem 3rem 3rem;
+            .title {
+                font-size: 1.6rem;
+                font-weight: 700;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 7.6rem;
+                    height: 2px;
+                    background-color: #7c9dbe;
+                    margin: .5rem 0 .8rem;
+                }
+            }
+            .pair {
+                display: flex;
+                justify-content: space-between;
+                .gray-text {
+                    color: $gray-text;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        margin-bottom: 3rem;
+    }
+}
+
+.brands-grid {
+    display: grid;
+
+
+    grid-template-columns: 1fr 1fr repeat(3, 2fr) 1fr 1fr;
+
+    margin: 1rem -.5rem;
+    .brand {
+        margin: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 11vmin;
+        //min-width: 10.4rem;
+        background-color: #fff;
+        img {
+            max-height: 10rem;
+            max-width: 90%;
+        }
+    }
+    .brand-1,
+    .brand-20,
+    .brand-25 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .brand-5,
+    .brand-24,
+    .brand-29 {
+        grid-column-start: 6;
+        grid-column-end: 8;
     }
 }
 
