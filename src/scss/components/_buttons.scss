@@ -1,7 +1,11 @@
 .btn {
     display: inline-block;
     text-decoration: none;
+    border: none;
     transition: .2s ease-out;
+    &:active {
+        outline: none;
+    }
     &.btn-inverse {
         font-size: 1.2rem;
         font-weight: 700;   

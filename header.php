@@ -66,7 +66,7 @@
 						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 					] ); 
 					?>
-					<a href="#" class="btn btn-inverse">Заказать звонок</a>
+					<a href="#popup1" class="btn btn-inverse">Заказать звонок</a>
 
 					<div class="pair">
 						<a href="tel:<?=PHONE_HREF?>" class="phone-link"><?=PHONE?></a>
@@ -107,7 +107,7 @@
 						<span class="d-md-block">для бизнеса</span>
 					</h1>
 
-					<a href="#" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
+					<a href="#popup1" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
 
 					<div class="main-features">
 						<div class="main-feature">

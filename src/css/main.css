@@ -460,8 +460,13 @@ ymaps, #map {
 .btn {
   display: inline-block;
   text-decoration: none;
+  border: none;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+}
+
+.btn:active {
+  outline: none;
 }
 
 .btn.btn-inverse {
@@ -912,6 +917,175 @@ ymaps, #map {
 
 .langs .ru::before {
   content: url("../img/langs/ru.svg");
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 5% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.popup .head {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.popup .head .logo-img {
+  max-width: 255px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  padding-bottom: 2rem;
+  max-height: 30%;
+  text-align: center;
+}
+
+.popup .content .title {
+  padding: 3rem 0 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ebebeb;
+  display: inline-block;
+}
+
+.popup .content .title .h {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 576px) {
+  .popup .content .title .h {
+    font-size: 24px;
+  }
+}
+
+.popup .content .title .sub-h {
+  color: #838d99;
+  font-size: 1.3rem;
+}
+
+.popup .content .input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.popup .content .input-wrapper input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+  padding: 1.8rem;
+  margin: 1rem 0;
+  border-radius: 2.6rem;
+  background-color: #f0f2f7;
+  border: 0.1rem solid #e3e8f0;
+}
+
+@media (min-width: 380px) {
+  .popup .content .input-wrapper input {
+    width: 30rem;
+  }
+}
+
+.popup .content .input-wrapper input:hover {
+  -webkit-box-shadow: 0 0 0.6rem rgba(0, 202, 255, 0.6);
+          box-shadow: 0 0 0.6rem rgba(0, 202, 255, 0.6);
+}
+
+.popup .content .input-wrapper input:focus {
+  outline: none;
+  border-color: #1ac6df;
+  -webkit-box-shadow: 0 0 0.6rem rgba(0, 202, 255, 0.6);
+          box-shadow: 0 0 0.6rem rgba(0, 202, 255, 0.6);
+}
+
+.popup .content .input-wrapper.icon input {
+  padding-left: 4rem;
+}
+
+.popup .content .input-wrapper.icon:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f061";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 2rem;
+}
+
+.popup .content .input-wrapper.i-user:before {
+  content: "\f007";
+}
+
+.popup .content .input-wrapper.i-mail:before {
+  content: "\f0e0";
+}
+
+.popup .content .input-wrapper.i-phone:before {
+  content: "\f095";
+}
+
+.popup .content .btn-form {
+  width: 30rem;
+  max-width: 100%;
+  text-align: center;
+  padding: 2.5rem;
+  margin: 2rem 0 2rem;
+  border-radius: 3.1rem;
+  font-size: 1.4rem;
+  background-color: #1ac6df;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 980px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 80%;
+  }
 }
 
 .mobile-navbar {
@@ -1812,7 +1986,7 @@ footer .copyrights .privacy-politics:active {
   background-color: #208a98;
 }
 
-.btn-container.youtube {
+.btn-container.youb {
   background-color: #07a9bf;
 }
 

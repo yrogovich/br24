@@ -61,7 +61,7 @@
 					<a class="btn-container instagram" href="#">
 						<i class="fab fa-instagram"></i>
 					</a>
-					<a class="btn-container youtube" href="#">
+					<a class="btn-container youb" href="#">
 						<i class="fab fa-youtube"></i>
 					</a>
 				</div>
@@ -107,6 +107,43 @@
 	</div>
 </div>
 <!-- /.mobile-navbar -->
+
+<!-- PopUp -->
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<div class="head">
+			<a class="logo" href="<?php echo get_home_url() ?>" rel="home" titile="Бизнесрост">
+				<img class="logo-img" 
+					src="<?php bloginfo('template_url') ?>/src/img/biznesrost_logo.svg"
+					alt="Бизнесрост логотип"
+					titile="Бизнесрост"
+					onerror="this.onerror=null; this.src='<?php bloginfo('template_url') ?>/src/img/biznesrost_logo.png'">
+				<span class="logo-text">Агенство эффективного интернет-маркетинга</span>
+			</a>
+			<a class="close" href="#">&times;</a>
+		</div>
+		
+		<div class="content">
+			<div class="title">
+				<div class="h">Заказать обратный звонок</div>
+				<div class="sub-h">Оставьте свои контакты,  что бы мы могли связаться с Вами</div>
+			</div>
+			<form action="">
+				<div class="input-wrapper icon i-user">
+					<input type="text" placeholder="Введите ваше имя">
+				</div>
+				<div class="input-wrapper icon i-mail">
+					<input type="text" placeholder="Введите ваш телефон">
+				</div>
+				<div class="input-wrapper icon i-phone">
+					<input type="text" placeholder="Введите ваш e-mail">
+				</div>
+				<button class="btn btn-form btn-shadow">Перезвоните мне</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- /PopUp -->
 
 <?php wp_footer(); ?>
 
