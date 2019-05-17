@@ -531,7 +531,7 @@ ymaps, #map {
     margin-left: 2rem;
   }
   .btn.btn-with-case:hover {
-    padding: 2.5rem 5.7rem 2.5rem 3.7rem;
+    padding: 2.5rem 2.3rem 2.5rem 6.6rem;
   }
   .btn.btn-with-case:hover:after {
     -webkit-transition: .2s;
