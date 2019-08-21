@@ -16,6 +16,12 @@
             }
         });
 
+        $('.overlay').click(function() {
+            window.location.hash = "#";
+        });
+        // Masks for input
+        $('.phone-mask').mask('+375 (00) 000-00-00');
+
         //  Show ymaps on scroll
         var point = $('#services');
         var pointTop = point.offset().top;

@@ -24,7 +24,7 @@ get_header();
                     1 месяц SEO продвижения в подарок
                     </p>
                     <p class="banner-text">Оставьте заявку, что бы мы забронировали за вами бонус. Акция действует до 31 <?php echo MONTH[date('n')-1]; ?> 2019г.</p>
-                    <a href="#" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
+                    <a href="#popup-request" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
                 </div>
             </div>
         </div>
@@ -473,7 +473,7 @@ get_header();
 
         <div class="pair">
             <div class="big-text"><span class="primary">Создаем</span> сайты для бизнеса</div>
-            <a href="#" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
+            <a href="#popup-request" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
         </div>
     </div>
 </div>

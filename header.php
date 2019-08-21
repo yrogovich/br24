@@ -107,7 +107,7 @@
 						<span class="d-md-block">для бизнеса</span>
 					</h1>
 
-					<a href="#popup1" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
+					<a href="#popup-request" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
 
 					<div class="main-features">
 						<div class="main-feature">

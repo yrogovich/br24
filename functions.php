@@ -1,4 +1,15 @@
 <?php
+
+
+//$start_wp_theme_tmp
+
+
+
+//wp_tmp
+
+
+//$end_wp_theme_tmp
+?><?php
 /**
  * br24-theme functions and definitions
  *
@@ -126,7 +137,7 @@ function br24_theme_scripts() {
 
 	wp_enqueue_script('jQuery');
 	wp_enqueue_script('jquery-lazy', '//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js' , 'jQuery' , false, true );
-	//wp_enqueue_script('jquery-lazy-plugins', '//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js' , 'jQuery' , false, true );
+	wp_enqueue_script( 'phone-mask', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js', 'jQuery', null, true );
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/src/js/main.js' , 'jQuery' , false, true );
 	wp_enqueue_script('handle', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js', 'jQuery', false, true);
 	wp_enqueue_script('waterwheelCarousel', get_template_directory_uri() . '/src/libs/jquery.waterwheelCarousel.min.js' , 'jQuery' , false, true );
@@ -144,27 +155,27 @@ function removeJqueryMigrate(&$scripts){
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+//require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+//require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
+// if ( defined( 'JETPACK__VERSION' ) ) {
+// 	require get_template_directory() . '/inc/jetpack.php';
+// }
 
