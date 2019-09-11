@@ -937,7 +937,7 @@ ymaps, #map {
   z-index: 100;
 }
 
-.overlay:target {
+.overlay.active {
   visibility: visible;
   opacity: 1;
 }
@@ -951,6 +951,7 @@ ymaps, #map {
   position: relative;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  z-index: 10;
 }
 
 .popup .head {
@@ -977,6 +978,7 @@ ymaps, #map {
 
 .popup .close:hover {
   color: #06D85F;
+  cursor: pointer;
 }
 
 .popup .content {
@@ -2180,6 +2182,7 @@ footer .copyrights .privacy-politics:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 10rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -2354,6 +2357,14 @@ footer .copyrights .privacy-politics:active {
   color: #1ac6df;
 }
 
+.technologys-container .h3 {
+  margin-bottom: 2rem;
+}
+
+.technologys {
+  margin: 5rem 0;
+}
+
 #cases {
   padding-bottom: 13rem;
 }
@@ -2494,7 +2505,7 @@ footer .copyrights .privacy-politics:active {
 }
 
 #reviews {
-  background-size: cover;
+  background-size: contain;
   background-position: bottom center;
   background-repeat: no-repeat;
   padding-bottom: 11rem;
@@ -2779,11 +2790,11 @@ footer .copyrights .privacy-politics:active {
   display: grid;
   -ms-grid-columns: 1fr 1fr (2fr)[3] 1fr 1fr;
       grid-template-columns: 1fr 1fr repeat(3, 2fr) 1fr 1fr;
-  margin: 1rem -.5rem;
+  margin: 2rem 0;
+  grid-gap: 1rem;
 }
 
 .brands-grid .brand {
-  margin: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2794,6 +2805,8 @@ footer .copyrights .privacy-politics:active {
       -ms-flex-align: center;
           align-items: center;
   height: 11vmin;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 
@@ -2803,16 +2816,26 @@ footer .copyrights .privacy-politics:active {
 }
 
 .brands-grid .brand-1,
-.brands-grid .brand-20,
-.brands-grid .brand-25 {
+.brands-grid .brand-5 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  height: 100%;
+}
+
+.brands-grid .brand-1,
+.brands-grid .brand-16,
+.brands-grid .brand-21,
+.brands-grid .brand-26 {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .brands-grid .brand-5,
-.brands-grid .brand-24,
-.brands-grid .brand-29 {
+.brands-grid .brand-20,
+.brands-grid .brand-25,
+.brands-grid .brand-30 {
   -ms-grid-column: 6;
       grid-column-start: 6;
   grid-column-end: 8;

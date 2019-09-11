@@ -9,7 +9,7 @@
     visibility: hidden;
     opacity: 0;
     z-index: 100;
-    &:target {
+    &.active {
         visibility: visible;
         opacity: 1;
     }
@@ -23,6 +23,7 @@
     width: 30%;
     position: relative;
     transition: all 1s ease-in-out;
+    z-index: 10;
     .head {
         text-align: center;
         .logo-img {
@@ -44,7 +45,8 @@
         }
     .close:hover {
         color: #06D85F;
-        }
+        cursor: pointer;
+    }
     .content {
         padding-bottom: 2rem;
         .title {
@@ -63,9 +65,6 @@
                 color: #838d99;
                 font-size: 1.3rem;
             }
-        }
-        form {
-            
         }
         .input-wrapper {
             display: inline-block;
@@ -130,8 +129,6 @@
         text-align: center;
     }
 }
-  
-
   
 @media screen and (max-width: 980px){
     .box{

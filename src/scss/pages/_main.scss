@@ -112,6 +112,7 @@
     @include row-flex();
     justify-content: center;
     @include lg(justify-content, space-between);
+    margin-bottom: 10rem;
 
     .service-card {
         @include col();
@@ -205,6 +206,12 @@
         }
     }
 }
+.technologys-container .h3 {
+    margin-bottom: 2rem;
+}
+.technologys {
+    margin: 5rem 0;
+}
 
 // Cases
 #cases {
@@ -292,7 +299,7 @@
     }
 }
 #reviews { 
-    background-size: cover;
+    background-size: contain;
     background-position: bottom center;
     background-repeat: no-repeat;
 
@@ -453,18 +460,17 @@
 .brands-grid {
     display: grid;
 
-
     grid-template-columns: 1fr 1fr repeat(3, 2fr) 1fr 1fr;
 
-    margin: 1rem -.5rem;
+    margin: 2rem 0;
+    grid-gap: 1rem;
     .brand {
-        margin: .5rem;
         display: flex;
         justify-content: center;
         align-items: center;
 
         height: 11vmin;
-        //min-width: 10.4rem;
+        box-shadow: 0 0 5px rgba(0,0,0,.1);
         background-color: #fff;
         img {
             max-height: 10rem;
@@ -472,14 +478,22 @@
         }
     }
     .brand-1,
-    .brand-20,
-    .brand-25 {
+    .brand-5 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: 100%;
+    }
+    .brand-1,
+    .brand-16,
+    .brand-21,
+    .brand-26 {
         grid-column-start: 1;
         grid-column-end: 3;
     }
     .brand-5,
-    .brand-24,
-    .brand-29 {
+    .brand-20,
+    .brand-25,
+    .brand-30 {
         grid-column-start: 6;
         grid-column-end: 8;
     }

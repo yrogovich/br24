@@ -24,7 +24,7 @@ get_header();
                     1 месяц SEO продвижения в подарок
                     </p>
                     <p class="banner-text">Оставьте заявку, что бы мы забронировали за вами бонус. Акция действует до 31 <?php echo MONTH[date('n')-1]; ?> 2019г.</p>
-                    <a href="#popup-request" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
+                    <a href="#popup-request" rel="modal:open" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
                 </div>
             </div>
         </div>
@@ -152,6 +152,13 @@ get_header();
             <!-- /.service-card -->
         </div>
         <!-- /.service-container -->
+
+        <div class="technologys-container">
+            <div class="h3 h3-style-2">Технологии с которыми мы работаем</div>
+            <img data-src="<?php bloginfo('template_url') ?>/src/img/main-page/technology/technology-all.png" alt="technology-all" class="lazy technologys">
+        </div>
+        <!-- /.technologys-container -->
+        
         
     </div>
 </div>
@@ -354,93 +361,50 @@ get_header();
 
         <div class="h3 h3-style-2">Нам доверяют</div>
         <div class="brands-grid">
-            <div class="brand brand-1">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/bosh.png" alt="bosh" class="lazy">
+            <?php $brandName = [
+                "nissan",
+                "agronovia",
+                "rosstrans",
+                "gefest",
+                "bosh",
+                "avon",
+                "tricolor",
+                "belinka",
+                "glonas",
+                "rancio",
+                "citroen",
+                "aurora",
+                "limadas",
+                "markizy",
+                "neva",
+                "alfa",
+                "germes",
+                "lord",
+                "divi",
+                "gid",
+                "odv",
+                "cp",
+                "palas",
+                "art",
+                "aresa-logo",
+                "klimolog",
+                "hdlt",
+                "balash",
+                "luck-repair",
+                "alive-stone",
+                "radamir",
+                "rivera",
+                "gardian",
+                "autnova",
+                "nettlebox",
+                "avtospas",
+                "clickmebel"
+            ]; 
+            for($i = 0; $i <= 36; $i++) : ?>
+            <div class="brand brand-<?=$i+1?>">
+                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/<?=$brandName[$i]?>.png" alt="<?=$brandName[$i]?>" class="lazy">
             </div>
-            <div class="brand brand-2">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/citroen.png" alt="citroen" class="lazy">
-            </div>
-            <div class="brand brand-3">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/tricolor.png" alt="tricolor" class="lazy">
-            </div>
-            <div class="brand brand-4">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/gefest.png" alt="gefest" class="lazy">
-            </div>
-            <div class="brand brand-5">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/nettlebox.png" alt="nettlebox" class="lazy">
-            </div>
-            <div class="brand brand-6">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/radamir.png" alt="radamir" class="lazy">
-            </div>
-            <div class="brand brand-7">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/rivera.png" alt="rivera" class="lazy">
-            </div>
-            <div class="brand brand-8">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/avon.png" alt="avon" class="lazy">
-            </div>
-            <div class="brand brand-9">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/palas_copy.png" alt="palas_copy" class="lazy">
-            </div>
-            <div class="brand brand-10">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/belinka.png" alt="belinka" class="lazy">
-            </div>
-            <div class="brand brand-11">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/hdlt.png" alt="hdlt" class="lazy">
-            </div>
-            <div class="brand brand-12">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/avtospas.png" alt="avtospas" class="lazy">
-            </div>
-            <div class="brand brand-13">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/glonas.png" alt="glonas" class="lazy">
-            </div>
-            <div class="brand brand-14">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/rancio.png" alt="rancio" class="lazy">
-            </div>
-            <div class="brand brand-15">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/cp.png" alt="cp" class="lazy">
-            </div>
-            <div class="brand brand-16">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/aurora.png" alt="aurora" class="lazy">
-            </div>
-            <div class="brand brand-17">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/limadas.png" alt="limadas" class="lazy">
-            </div>
-            <div class="brand brand-18">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/arkizu.png" alt="arkizu" class="lazy">
-            </div>
-            <div class="brand brand-19">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/neva.png" alt="neva" class="lazy">
-            </div>
-            <div class="brand brand-20">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/alfa.png" alt="alfa" class="lazy">
-            </div>
-            <div class="brand brand-21">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/germes.png" alt="germes" class="lazy">
-            </div>
-            <div class="brand brand-22">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/lord.png" alt="lord" class="lazy">
-            </div>
-            <div class="brand brand-23">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/divi.png" alt="divi" class="lazy">
-            </div>
-            <div class="brand brand-24">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/gidvokruf.png" alt="gidvokruf" class="lazy">
-            </div>
-            <div class="brand brand-25">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/odv.png" alt="odv" class="lazy">
-            </div>
-            <div class="brand brand-26">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/agronovia.png" alt="agronovia" class="lazy">
-            </div>
-            <div class="brand brand-27">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/rosstrans.png" alt="rosstrans" class="lazy">
-            </div>
-            <div class="brand brand-28">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/art.png" alt="art" class="lazy">
-            </div>
-            <div class="brand brand-29">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/aresa-logo.png" alt="aresa-logo" class="lazy">
-            </div>
+            <?php endfor; ?>
         </div>
     </div>
 </div>
@@ -473,7 +437,7 @@ get_header();
 
         <div class="pair">
             <div class="big-text"><span class="primary">Создаем</span> сайты для бизнеса</div>
-            <a href="#popup-request" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
+            <a href="#popup-request" rel="modal:open" class="btn btn-primary btn-lg btn-shadow">Оставить заявку сейчас</a>
         </div>
     </div>
 </div>
@@ -495,7 +459,7 @@ get_header();
 
                 <p class="bold">Остались вопросы?</p>
                 <p class="gray-text">Задайте их нашему специалисту</p>
-                <a href="#" class="btn btn-primary btn-lg btn-shadow i-msg">Бесплатная консультация</a>
+                <a href="#popup1" rel="modal:open" class="btn btn-primary btn-lg btn-shadow i-msg">Бесплатная консультация</a>
 
                 <div class="social-links">
                     <a href="#" class="btn btn-viber">Viber</a>

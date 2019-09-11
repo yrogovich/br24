@@ -3,12 +3,30 @@
      * When DOM is ready
      */
     $(document).ready(function(){
+
+        // Modal script
+        $('a[rel="modal:open"]').click(function() {
+            var modalName = $(this).attr('href');
+            $(modalName).addClass("active");
+            return false;
+        });
+        $('a[rel="modal:close"]').click(function(){
+            $('.overlay').removeClass('active');
+            return false;
+        });
+        $(document).on('keydown', function(event) {
+            if (event.key == "Escape") {
+                $('.overlay').removeClass('active');
+            }
+        });
+
+
         // Lazyloading
         $('.lazy').Lazy({
             // your configuration goes here
             scrollDirection: 'vertical',
             effect: 'fadeIn',
-            effectTime: 1000,
+            effectTime: 500,
             //threshold: 0,
             visibleOnly: true,
             onError: function(element) {
@@ -16,9 +34,6 @@
             }
         });
 
-        $('.overlay').click(function() {
-            window.location.hash = "#";
-        });
         // Masks for input
         $('.phone-mask').mask('+375 (00) 000-00-00');
 
@@ -75,7 +90,7 @@
                 x: -((mouse.clientX - window.innerWidth / 2) / resistance),
                 y: -((mouse.clientY - window.innerHeight / 2) / resistance)
             });
-            };
+        };
             
         $(document).mousemove(function(e) {
             $(".circle-1").parallax(50, e);
@@ -90,12 +105,7 @@
             $('body').toggleClass("overflow");     
         });
 
-
         var carousel = $("#slider").waterwheelCarousel({
-            // include options like this:
-            // (use quotes only for string values, and no trailing comma after last option)
-            // option: value,
-            // option: value
             separation: 85,
             keyboardNav: true
         });

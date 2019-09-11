@@ -25,7 +25,7 @@
 							onerror="this.onerror=null; this.src='<?php bloginfo('template_url') ?>/src/img/biznesrost_logo.png'">
 						<span class="logo-text">Агенство эффективного интернет-маркетинга</span>
 					</a>
-					<a href="#" class="btn btn-inverse-2">Бесплатная консультация</a>
+					<a href="#popup1" rel="modal:open" class="btn btn-inverse-2">Бесплатная консультация</a>
 					<a href="#" class="link">Наши реквизиты</a>
 				</div>
 				<div class="col-divider"></div>
@@ -45,6 +45,22 @@
 					?>
 				</div>
 				<div class="col-divider"></div>
+				<!-- <div class="col">
+					<div class="title">Услуги</div>
+					<?php 
+					wp_nav_menu( [
+						'menu'            => 'menu_top', 
+						'menu_class'      => 'footer-menu', 
+						'menu_id'         => 'footer-menu_top',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					] ); 
+					?>
+				</div> 
+				 <div class="col-divider"></div> -->
 				<div class="col">
 					<div class="title">Обратная связь</div>
 					<a class="contact icon-phone" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
@@ -108,104 +124,7 @@
 </div>
 <!-- /.mobile-navbar -->
 
-<!-- PopUp -->
-<div id="popup1" class="overlay">
-	<div class="popup">
-		<div class="head">
-			<a class="logo" href="<?php echo get_home_url() ?>" rel="home" titile="Бизнесрост">
-				<img class="logo-img" 
-					src="<?php bloginfo('template_url') ?>/src/img/biznesrost_logo.svg"
-					alt="Бизнесрост логотип"
-					title="Бизнесрост">
-				<span class="logo-text">Агенство эффективного интернет-маркетинга</span>
-			</a>
-			<a class="close" href="#">&times;</a>
-		</div>
-		
-		<div class="content">
-			<div class="title">
-				<div class="h">Заказать обратный звонок</div>
-				<div class="sub-h">Оставьте свои контакты,  что бы мы могли связаться с Вами</div>
-			</div>
-			<form action="javascript:" onsubmit="callHandler('#callback-form')" id="callback-form">
-				<input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
-				<input type="hidden" name="form" value="Заказать обратный звонок">
-				<div class="input-wrapper icon i-user">
-					<input type="text" placeholder="Введите ваше имя" name="user_name" required>
-				</div>
-				<div class="input-wrapper icon i-phone">
-					<input type="text" placeholder="Ваш № телефона" name="user_phone" class="phone-mask" required>
-				</div>
-				<!-- <div class="input-wrapper icon i-mail">
-					<input type="mail" placeholder="Введите ваш e-mail">
-				</div> -->
-				<button class="btn btn-form btn-shadow">Перезвоните мне</button>
-			</form>
-		</div>
-	</div>
-</div>
-<!-- /PopUp -->
-<!-- PopUp -->
-<div id="popup-request" class="overlay">
-	<div class="popup">
-		<div class="head">
-			<a class="logo" href="<?php echo get_home_url() ?>" rel="home" titile="Бизнесрост">
-				<img class="logo-img" 
-					src="<?php bloginfo('template_url') ?>/src/img/biznesrost_logo.svg"
-					alt="Бизнесрост логотип"
-					title="Бизнесрост">
-				<span class="logo-text">Агенство эффективного интернет-маркетинга</span>
-			</a>
-			<a class="close" href="#">&times;</a>
-		</div>
-		
-		<div class="content">
-			<div class="title">
-				<div class="h">Оставить заявку</div>
-				<div class="sub-h">Оставьте свои контакты,  что бы мы могли связаться с Вами</div>
-			</div>
-			<form action="javascript:" onsubmit="callHandler('#request-form')" id="request-form">
-				<input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
-				<input type="hidden" name="form" value="Заказать обратный звонок">
-				<div class="input-wrapper icon i-user">
-					<input type="text" placeholder="Введите ваше имя" name="user_name" required>
-				</div>
-				<div class="input-wrapper icon i-phone">
-					<input type="text" placeholder="Ваш № телефона" name="user_phone" class="phone-mask" required>
-				</div>
-				<div class="input-wrapper icon i-mail">
-					<input type="mail" placeholder="Введите ваш e-mail">
-				</div>
-				<button class="btn btn-form btn-shadow">Оставить заявку</button>
-			</form>
-		</div>
-	</div>
-</div>
-<!-- /PopUp -->
-<!-- PopUp -->
-<div id="popup-thx" class="overlay">
-	<div class="popup">
-		<div class="head">
-			<a class="logo" href="<?php echo get_home_url() ?>" rel="home" titile="Бизнесрост">
-				<img class="logo-img" 
-					src="<?php bloginfo('template_url') ?>/src/img/biznesrost_logo.svg"
-					alt="Бизнесрост логотип"
-					title="Бизнесрост">
-				<span class="logo-text">Агенство эффективного интернет-маркетинга</span>
-			</a>
-			<a class="close" href="#">&times;</a>
-		</div>
-		
-		<div class="content">
-			<div class="title">
-				<div class="h">Спасибо за обращение!</div>
-				<div class="sub-h">Мы получили вашу заявку.</div>
-			</div>
-			<a href="#" class="btn btn-form btn-shadow">Закрыть окно</a>
-		</div>
-	</div>
-</div>
-<!-- /PopUp -->
+<?php get_template_part('templates/parts/modals') ?>
 
 <script>
 	function callHandler(form) {
