@@ -26,9 +26,24 @@
 						<span class="logo-text">Агенство эффективного интернет-маркетинга</span>
 					</a>
 					<a href="#popup1" rel="modal:open" class="btn btn-inverse-2">Бесплатная консультация</a>
-					<a href="#" class="link">Наши реквизиты</a>
+
+					<div class="social">
+						<a class="btn-container vk" href="#">
+							<i class="fab fa-vk"></i>
+						</a>
+						<a class="btn-container facebook" href="#">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a class="btn-container instagram" href="#">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a class="btn-container youb" href="#">
+							<i class="fab fa-youtube"></i>
+						</a>
+					</div>
+					<!-- /.social -->
 				</div>
-				<div class="col-divider"></div>
+				
 				<div class="col">
 					<div class="title">Услуги</div>
 					<?php 
@@ -44,43 +59,23 @@
 					] ); 
 					?>
 				</div>
-				<div class="col-divider"></div>
-				<!-- <div class="col">
-					<div class="title">Услуги</div>
-					<?php 
-					wp_nav_menu( [
-						'menu'            => 'menu_top', 
-						'menu_class'      => 'footer-menu', 
-						'menu_id'         => 'footer-menu_top',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '',
-						'link_after'      => '',
-						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					] ); 
-					?>
+				
+				<div class="col col-sm">
+					<div class="title">О нас</div>
+					<ul class="footer-menu">
+						<li><a href="#">Клиенты</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Команда </a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
 				</div> 
-				 <div class="col-divider"></div> -->
 				<div class="col">
 					<div class="title">Обратная связь</div>
 					<a class="contact icon-phone" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
 					<a class="contact icon-mail" href="mailto:<?=EMAIL?>"><?=EMAIL?></a>
 					<span class="contact icon-map"><?=ADRESS?></span>
 				</div>
-				<div class="col-social">
-					<a class="btn-container vk" href="#">
-						<i class="fab fa-vk"></i>
-					</a>
-					<a class="btn-container facebook" href="#">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a class="btn-container instagram" href="#">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a class="btn-container youb" href="#">
-						<i class="fab fa-youtube"></i>
-					</a>
-				</div>
+				
 			</div>
 		</div>
 		<div class="copyrights">

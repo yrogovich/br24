@@ -91,6 +91,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   color: #2f333e;
+  overflow-x: hidden;
 }
 
 body::-moz-selection {
@@ -1114,9 +1115,9 @@ ymaps, #map {
 }
 
 .mobile-navbar .menu li {
-  margin: 1.8rem 0;
-  padding: 0 0 1.8rem 0;
   border-bottom: 1px solid #19b0c7;
+  margin: 3.8vh 0;
+  padding: 0 0 3.8vh 0;
 }
 
 .mobile-navbar .menu li:last-child {
@@ -1132,9 +1133,8 @@ ymaps, #map {
 
 .mobile-navbar .mobile-contacts {
   background-color: #fff;
-  height: 100%;
-  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
 }
 
 .mobile-navbar .mobile-contacts .container {
@@ -1173,13 +1173,14 @@ ymaps, #map {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 -1rem;
 }
 
 .mobile-navbar .btn-viber,
 .mobile-navbar .btn-whatsapp,
 .mobile-navbar .btn-telegram {
   padding: 1.1rem 1.4rem;
-  margin: 1rem 0;
+  margin: 1rem .25rem;
   min-width: 1rem;
   font-size: 1.2rem;
   color: #fff;
@@ -1829,6 +1830,7 @@ footer .footer-row {
 }
 
 footer .footer-row .col {
+  display: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word;
@@ -1852,6 +1854,38 @@ footer .footer-row .col {
 
 footer .footer-row .col:last-child {
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 576px) {
+  footer .footer-row .col {
+    display: block;
+  }
+}
+
+footer .footer-row .col:first-child {
+  display: block;
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 576px) {
+  footer .footer-row .col:first-child {
+    margin-bottom: 5rem;
+  }
+}
+
+footer .footer-row .col-sm {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% - 30px);
+}
+
+@media screen and (min-width: 992px) {
+  footer .footer-row .col-sm {
+    width: calc(16.66667% - 30px);
+  }
 }
 
 footer .footer-row .col-divider {
@@ -1883,39 +1917,6 @@ footer .footer-row .col-divider:before {
 @media screen and (min-width: 992px) {
   footer .footer-row .col-divider:before {
     content: "";
-  }
-}
-
-footer .footer-row .col-social {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% - 30px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width: 992px) {
-  footer .footer-row .col-social {
-    width: calc(8.33333% - 30px);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  footer .footer-row .col-social {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  footer .footer-row .col-social {
-    margin: -3rem 0;
   }
 }
 
@@ -1959,12 +1960,18 @@ footer .copyrights .privacy-politics:active {
           filter: brightness(80%);
 }
 
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -.5rem;
+}
+
 .btn-container {
-  min-height: 6.5rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 6.5rem;
-          flex: 1 1 6.5rem;
-  background-color: #0c434a;
+  background-color: #105f69;
+  margin: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1975,25 +1982,18 @@ footer .copyrights .privacy-politics:active {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   text-decoration: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .btn-container:hover {
-  -webkit-filter: saturate(190%) contrast(120%);
-          filter: saturate(190%) contrast(120%);
-}
-
-.btn-container.facebook {
-  background-color: #0a545e;
-}
-
-.btn-container.instagram {
-  background-color: #208a98;
-}
-
-.btn-container.youb {
-  background-color: #07a9bf;
+  -webkit-filter: saturate(220%) contrast(120%);
+          filter: saturate(220%) contrast(120%);
 }
 
 #stock {

@@ -6,6 +6,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.4rem;
 	color: $black;
+	overflow-x: hidden;
 	&::selection {
 		//color: #ff0; /* Цвет текста */
 		background: #000; /* Цвет фона */

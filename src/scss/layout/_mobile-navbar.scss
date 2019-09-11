@@ -18,9 +18,9 @@
 
     .menu {
         li {
-            margin: 1.8rem 0;
-            padding: 0 0 1.8rem 0;
             border-bottom: 1px solid #19b0c7;
+            margin: 3.8vh 0;
+            padding: 0 0 3.8vh 0;
             &:last-child {
                 border-bottom: none;
             }
@@ -34,8 +34,7 @@
     }
     .mobile-contacts {
         background-color: #fff;
-        height: 100%;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
         .container {
             padding: 1.5rem;
         }
@@ -56,12 +55,13 @@
     .social-links {
         display: flex;
         justify-content: space-between;
+        margin: 0 -1rem;
     }
     .btn-viber,
     .btn-whatsapp,
     .btn-telegram {
         padding: 1.1rem 1.4rem;
-        margin: 1rem 0;
+        margin: 1rem .25rem;
         min-width: 1rem;
         font-size: 1.2rem;
         color: $white;
