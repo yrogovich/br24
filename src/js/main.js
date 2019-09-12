@@ -106,17 +106,18 @@
             $('body').toggleClass("overflow");     
         });
 
-        var carousel = $("#slider").waterwheelCarousel({
-            separation: 85,
-            keyboardNav: true
-        });
-
-        $(".arrow-left").click(function(){
-            carousel.next()
-        });
-        $(".arrow-right").click(function(){
-            carousel.prev()
-        });
+        if('#slider') {
+            var carousel = $("#slider").waterwheelCarousel({
+                separation: 85,
+                keyboardNav: true
+            });
+            $(".arrow-left").click(function(){
+                carousel.next()
+            });
+            $(".arrow-right").click(function(){
+                carousel.prev()
+            });
+        }
     });
 
 })(jQuery); // <----- jQuery no conflict wrapper
