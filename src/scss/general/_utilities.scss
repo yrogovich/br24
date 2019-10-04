@@ -4,16 +4,33 @@
 .d-block {
     display: block;
 }
-.d-md-block {
+.d-md-block,
+.md-block {
     display: inline-block;
     @include md(display, block);
 }
 .gray {
     background-color: #F5F8FE;
 }
+.red {
+    color: red;
+}
 .bold {
     font-weight: 700;
 }
 .text-center {
     text-align: center;
+}
+.break-all {
+    word-break: break-all;
+}
+.m-auto {
+    margin: auto;
+}
+.deep-blue {
+    background-color: #305070;
+    color: $white;
+    .input-wrapper {
+        color: #a1a6bb;
+    }
 }

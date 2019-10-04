@@ -1,0 +1,132 @@
+.portfolio-page,
+.single-page {
+    padding-top: 3rem;
+    min-height: 65vh;
+
+    .h2-primary.pseudo-none{
+        padding-top: 0;
+        margin-bottom: 3rem;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.portfolio-page {
+    padding-bottom: 15rem;
+}
+
+.single-page {
+    .link {
+        font-weight: 700;
+    }
+    .site-screenshot,
+    .big-image,
+    .content {
+        img {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+    }
+    .additional-info {
+        margin-bottom: 2rem;
+    }
+    .big-image {
+        width: 100%;
+        margin-bottom: -10rem;
+    }
+    .body {
+        padding-top: 13rem;
+        background-color: $section-gray;
+        hr {
+            margin: 2rem 0 4.5rem;
+            border-color: #cad0dd;
+        }
+        .row {
+            padding-bottom: 5rem;
+        }
+        .content {
+            color: #838d99;
+            font-size: 1.4rem;
+        }
+    }
+    .features {
+        @include row-flex();
+
+        .feature {
+            @include col();
+            @include size(12);
+            @include size-xs(6);
+            @include size-md(3); 
+
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            img {
+                width: 4.2rem;
+                height: 4.2rem;
+                object-fit: contain;
+                margin-right: 1rem;
+            }
+            .text {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        }
+    }
+    .foot {
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        text-align: center;
+        .order-site {
+            margin-bottom: 4rem;
+            font-size: 1.4rem;
+            @media (max-width: 500px) {
+                a {
+                    display: block;
+                }
+            }
+        }
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+            @include sm(flex-direction, row);
+            align-items: center;
+            margin: -1rem;
+
+            .btn {
+                margin: 1rem;
+            }
+            .btn-with-case {
+                padding: 1.5rem 2rem 1.5rem 2.4rem;
+                font-size: 1.3rem;
+                &:after {
+                    margin-left: 1rem;
+                }
+                &:hover {
+                    padding: 1.5rem .5rem 1.5rem 3.9rem;
+                    &:after {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.row {
+    @include row-flex();
+
+    .additional-info {
+        @include col();
+        @include size(12);
+        @include size-md(4);
+    }
+    .content {
+        @include col();
+        @include size(12);
+        @include size-md(8);
+    }
+}

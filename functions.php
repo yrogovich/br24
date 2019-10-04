@@ -1,15 +1,4 @@
 <?php
-
-
-//$start_wp_theme_tmp
-
-
-
-//wp_tmp
-
-
-//$end_wp_theme_tmp
-?><?php
 /**
  * br24-theme functions and definitions
  *
@@ -18,81 +7,112 @@
  * @package br24-theme
  */
 
-// if ( ! function_exists( 'br24_theme_setup' ) ) :
-// 	/**
-// 	 * Sets up theme defaults and registers support for various WordPress features.
-// 	 *
-// 	 * Note that this function is hooked into the after_setup_theme hook, which
-// 	 * runs before the init hook. The init hook is too late for some features, such
-// 	 * as indicating support for post thumbnails.
-// 	 */
-// 	function br24_theme_setup() {
-// 		/*
-// 		 * Make theme available for translation.
-// 		 * Translations can be filed in the /languages/ directory.
-// 		 * If you're building a theme based on br24-theme, use a find and replace
-// 		 * to change 'br24-theme' to the name of your theme in all the template files.
-// 		 */
-// 		load_theme_textdomain( 'br24-theme', get_template_directory() . '/languages' );
+if ( ! function_exists( 'br24_theme_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function br24_theme_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on br24-theme, use a find and replace
+		 * to change 'br24-theme' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'br24-theme', get_template_directory() . '/languages' );
 
-// 		// Add default posts and comments RSS feed links to head.
-// 		add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-// 		/*
-// 		 * Let WordPress manage the document title.
-// 		 * By adding theme support, we declare that this theme does not use a
-// 		 * hard-coded <title> tag in the document head, and expect WordPress to
-// 		 * provide it for us.
-// 		 */
-// 		add_theme_support( 'title-tag' );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-// 		/*
-// 		 * Enable support for Post Thumbnails on posts and pages.
-// 		 *
-// 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-// 		 */
-// 		add_theme_support( 'post-thumbnails' );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-// 		// This theme uses wp_nav_menu() in one location.
-// 		register_nav_menus( array(
-// 			'menu-1' => esc_html__( 'Primary', 'br24-theme' ),
-// 		) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'menu-1' => esc_html__( 'Primary', 'br24-theme' ),
+		) );
 
-// 		/*
-// 		 * Switch default core markup for search form, comment form, and comments
-// 		 * to output valid HTML5.
-// 		 */
-// 		add_theme_support( 'html5', array(
-// 			'search-form',
-// 			'comment-form',
-// 			'comment-list',
-// 			'gallery',
-// 			'caption',
-// 		) );
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-// 		// Set up the WordPress core custom background feature.
-// 		add_theme_support( 'custom-background', apply_filters( 'br24_theme_custom_background_args', array(
-// 			'default-color' => 'ffffff',
-// 			'default-image' => '',
-// 		) ) );
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
 
-// 		// Add theme support for selective refresh for widgets.
-// 		add_theme_support( 'customize-selective-refresh-widgets' );
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		// add_theme_support( 'custom-logo', array(
+		// 	'height'      => 250,
+		// 	'width'       => 250,
+		// 	'flex-width'  => true,
+		// 	'flex-height' => true,
+		// ) );
+	}
+endif;
+add_action( 'after_setup_theme', 'br24_theme_setup' );
 
-// 		/**
-// 		 * Add support for core custom logo.
-// 		 *
-// 		 * @link https://codex.wordpress.org/Theme_Logo
-// 		 */
-// 		add_theme_support( 'custom-logo', array(
-// 			'height'      => 250,
-// 			'width'       => 250,
-// 			'flex-width'  => true,
-// 			'flex-height' => true,
-// 		) );
-// 	}
-// endif;
-// add_action( 'after_setup_theme', 'br24_theme_setup' );
+// Create portfolio post type
+add_action( 'init', 'register_post_types' );
+function register_post_types(){ 
+	$args = [
+		'labels' => [
+			'name' => 'Портфолио'
+		],
+		'menu_icon' => 'dashicons-images-alt',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 4,
+		'supports' => [ 'title', 'editor', 'thumbnail']
+	];
+	register_post_type( 'portfolio', $args );
+}
+function taxonomy_init() {
+	// create a new taxonomy
+	$labels = array(
+		'name' => _x( 'Тип сайта', 'taxonomy general name' ),
+	); 		
+	register_taxonomy('site_type',array('portfolio'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+	));
+}
+add_action( 'init', 'taxonomy_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -144,7 +164,7 @@ add_action( 'init', 'disable_wp_emojicons' );
 
 function theme_name_scripts() {
     if( ! wp_is_mobile() ) {
-		if(is_front_page()) {
+		if(is_front_page() || is_page('reviews') ) {
 			wp_enqueue_script('waterwheelCarousel', get_template_directory_uri() . '/src/libs/jquery.waterwheelCarousel.min.js' , 'jQuery' , false, true );
 		}
 		wp_enqueue_script('handle', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js', 'jQuery', false, true);
@@ -152,18 +172,59 @@ function theme_name_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 
+// AJAX LOAD MORE SCRIPTS
+function true_loadmore_scripts() {
+	if(is_archive()) {
+		wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/src/js/loadmore.js', array('jquery') );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'true_loadmore_scripts' );
+
+function true_load_posts(){
+ 
+	$args = unserialize( stripslashes( $_POST['query'] ) );
+	$args['paged'] = $_POST['page'] + 1; // следующая страница
+	$args['post_status'] = 'publish';
+ 
+	// обычно лучше использовать WP_Query, но не здесь
+	query_posts( $args );
+	// если посты есть
+	if( have_posts() ) :
+ 
+		// запускаем цикл
+		while( have_posts() ): the_post();
+			
+			get_template_part('templates/parts/case-card-without-lazy');
+ 
+		endwhile;
+ 
+	endif;
+	die();
+}
+ 
+add_action('wp_ajax_loadmore', 'true_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
+
 /**
  * Enqueue scripts and styles.
  */
 function br24_theme_scripts() {
+	if(!is_front_page()) {
+		wp_enqueue_style( 'simplelightbox-style', 'https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simplelightbox.min.css');
+		wp_enqueue_script('simplelightbox-script', 'https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/1.17.2/simple-lightbox.min.js' , 'jquery' , false, true );
+	}
 	wp_enqueue_style( 'br24-theme-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'br24-style', get_template_directory_uri() . '/src/css/main.css');
 	wp_enqueue_style( 'br24-fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('jquery-lazy', '//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js' , 'jquery' , false, true );
-	wp_enqueue_script('phone-mask', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js', 'jquery', null, true );
+	wp_enqueue_script('smooth-scroll', '//cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js' , 'jquery' , false, true );
 	wp_enqueue_script('main-script', get_template_directory_uri() . '/src/js/main.js' , 'jquery' , false, true );
+	
+	if(is_front_page()) {
+		wp_enqueue_script('home-page-script', get_template_directory_uri() . '/src/js/homePage.js' , array('jquery', 'main-script') , false, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'br24_theme_scripts' );
 

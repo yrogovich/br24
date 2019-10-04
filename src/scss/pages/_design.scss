@@ -1,0 +1,99 @@
+.design-page {
+    header {
+        .h1 {
+            margin-bottom: 0;
+        }
+        @include lg-block(){
+            .hero-right {
+                display: none;
+            }
+            background-image: url('../img/design/design-bg.png');
+        }         
+    }   
+    .hero-left {
+        width: 100%;
+        .h1{
+            @include sm-block() {
+                margin-top: 0;
+            }
+            margin-top: 3rem;
+            margin-bottom: 0;
+        }
+    } 
+}
+
+.design-case {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    padding: 3rem 3rem;
+    margin-bottom: 5rem;
+    .head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include md-block() {
+            justify-content: space-between;
+        };
+        
+        margin-bottom: 3rem;
+        border-bottom: 1px solid #b5b5b5;
+        .h3 {
+            margin-bottom: 3rem;
+        }
+        .pair {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: -1rem;
+            margin-bottom: 2rem;
+            .column {
+                margin: 1rem;
+                text-align: right;
+                .price {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+                .small-text {
+                    font-size: 1.2rem;
+                    color: $gray-text;
+                }
+            }
+            .btn {
+                margin: 1rem;
+            }
+        }
+    }
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -1.5rem;
+        .card {
+            background-color: $white;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+            flex: 1 1 24rem;
+            height: 24rem;
+            margin: 1.5rem;
+            overflow: hidden;
+            transition: .3s;
+
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            &.wide {
+                flex: 1 1 51rem;
+            }
+            img {
+                object-position: center;
+                object-fit: cover;
+                transition: 2s cubic-bezier(0.65, 0.05, 0.36, 1);
+            }
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

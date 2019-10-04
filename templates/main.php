@@ -5,10 +5,10 @@
 get_header();
 ?>
 
-<header>
-    <?php get_template_part('templates/parts/navbar') ?>
+<div class="main-page">
 
-    <div class="container">
+<header>
+    <div class="container translateYCenter">
         <div class="hero">
             <div class="hero-left">
                 <h1 class="h1">
@@ -58,7 +58,7 @@ get_header();
     </div>
 </header>
 
-<div class="section" id="stock">
+<!-- <div class="section sticky-section" id="stock">
     <div class="container">
         <div class="h2">Акция</div>
         <div class="banner-container">           
@@ -76,133 +76,63 @@ get_header();
                     <p class="banner-header">
                     1 месяц SEO продвижения в подарок
                     </p>
-                    <p class="banner-text">Оставьте заявку, что бы мы забронировали за вами бонус. Акция действует до 31 <?php echo MONTH[date('n')-1]; ?> 2019г.</p>
+                    <p class="banner-text">Оставьте заявку, что бы мы забронировали за вами бонус. Акция действует до 1 <?php echo MONTH[date('n')]; ?> 2019г.</p>
                     <a href="#popup-request" rel="modal:open" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- /#stock.section -->
+
+<div class="container">
+    <div class="sticky-section animationFadeIn" id="world-clients">
+        <div class="wrapper">
+            <div class="text">
+                <h2>Более 150 клиентов <span class="d-block">из 5 стран мира</span></h2>
+                <p>Успешный опыт работы с клиентами из:</p>
+                <ul class="flags">
+                    <li class="by">Беларусь</li>
+                    <li class="en">Англия</li>
+                    <li class="ru">Россия</li>
+                    <li class="cz">Чехия</li>
+                    <li class="kz">Казахстан</li>
+                </ul>
+
+                <a href="#popup-request" rel="modal:open" class="btn btn-primary btn-opacity">Стать нашим клиентом</a>
+            </div>
+            <!-- /.text -->
+            <div id="world">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie_light.min.js"></script>
+                <script>
+                    var worldAnimation = bodymovin.loadAnimation({
+                        container: document.getElementById("world"),
+                        renderer: 'svg',
+                        loop: true,
+                        autoplay: true,
+                        path: '<?php bloginfo('template_url'); ?>/src/json/data.json'
+                    });
+                </script>
+            </div>
+            <!-- /.world -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#world-clients -->
+</div>
+<!-- /.container -->
+
 <div class="section" id="services">
     <div class="container">
         <div class="h2">Услуги</div>
         <div class="h2-primary">Мы умеем лучше всего:</div>
-        <div class="service-container">
-            <div class="service-card">
-                <div class="row">
-                    <div class="col-left">
-                        <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/services/biznesrost-site-creating.jpg" alt="Создание сайтов">
-                    </div>
-                    <div class="col-right">
-                        <div class="head-text">Создание сайтов</div>
-
-                        <ul class="links">
-                            <li><a href="#">Лендинг</a></li>
-                            <li><a href="#">Корпаративный сайт</a></li>
-                            <li><a href="#">Интернет магазин / каталог</a></li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.service-card -->
-            <div class="service-card">
-                <div class="row">
-                    <div class="col-left">
-                        <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/services/biznesrost-seo.jpg" alt="SEO продвижение">
-                    </div>
-                    <div class="col-right">
-                        <div class="head-text">SEO продвижение</div>
-
-                        <ul class="links">
-                            <li><a href="#">SEO пакеты</a></li>
-                            <li><a href="#">Техническая оптимизация</a></li>
-                            <li><a href="#">Продвижение в YouTube</a></li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.service-card -->
-            <div class="service-card">
-                <div class="row">
-                    <div class="col-left">
-                        <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/services/biznesrost-context-ads.jpg" alt="Контекстная реклама">
-                    </div>
-                    <div class="col-right">
-                        <div class="head-text">Контекстная реклама</div>
-
-                        <ul class="links">
-                            <li><a href="#">Яндекс Директ</a></li>
-                            <li><a href="#">Google AdWords</a></li>
-                            <li><a href="#">Социальные сети</a></li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.service-card -->
-            <div class="service-card">
-                <div class="row">
-                    <div class="col-left">
-                        <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/services/biznesrost-design.jpg" alt="Дизайн">
-                    </div>
-                    <div class="col-right">
-                        <div class="head-text">Дизайн</div>
-
-                        <ul class="links">
-                            <li><a href="#">Дизайн сайтов</a></li>
-                            <li><a href="#">Маркейтинг кит</a></li>
-                            <li><a href="#">Наружная реклама</a></li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.service-card -->
-            <div class="service-card">
-                <div class="row">
-                    <div class="col-left">
-                        <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/services/biznesrost-video-editing.jpg" alt="Видеореклама">
-                    </div>
-                    <div class="col-right">
-                        <div class="head-text">Видеореклама</div>
-
-                        <ul class="links">
-                            <li><a href="#">Видео для You Tube</a></li>
-                            <li><a href="#">2D / 3D ролики</a></li>
-                            <li><a href="#">Монтаж / озвучка</a></li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.service-card -->
-            <div class="service-card">
-                <div class="row">
-                    <div class="col-left">
-                        <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/services/biznesrost-maintenance-cost.jpg" alt="Тех. обслуживание сайтов">
-                    </div>
-                    <div class="col-right">
-                        <div class="head-text">Тех. обслуживание сайтов</div>
-
-                        <ul class="links">
-                            <li><a href="#">Наполнение интернет магазина</a></li>
-                            <li><a href="#">Внесение изменений на сайт</a></li>
-                            <li><a href="#">Копирайт</a></li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.service-card -->
+        <div class="service-container big-margin">
+            <?php get_template_part('templates/service-cards/site-creating') ?>
+            <?php get_template_part('templates/service-cards/seo') ?>
+            <?php get_template_part('templates/service-cards/context-ad') ?>
+            <?php get_template_part('templates/service-cards/design') ?>
+            <?php get_template_part('templates/service-cards/video-creating') ?>
+            <?php get_template_part('templates/service-cards/tech-maintence') ?>
         </div>
         <!-- /.service-container -->
 
@@ -210,309 +140,24 @@ get_header();
             <div class="h3 h3-style-2">Технологии с которыми мы работаем</div>
             <img data-src="<?php bloginfo('template_url') ?>/src/img/main-page/technology/technology-all.png" alt="technology-all" class="lazy technologys">
         </div>
-        <!-- /.technologys-container -->
-        
-        
+        <!-- /.technologys-container -->   
     </div>
 </div>
 <!-- /#services.section -->
-<div class="section gray" id="cases">
-    <div class="container">
-        <div class="h2">Кейсы</div>
-        <div class="h2-primary">Наши проекты</div>
-       
-        <div class="cases-container">
-            <div class="case-card">
-                <div class="image-wrapper">
-                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
-                </div>
-                <div class="text-wrapper">
-                    <div class="title">Маркизы и перголы в Москве</div>
-                    <div class="hr"></div>
-                    <div class="pair">
-                        <div class="col">
-                            <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-            <!-- /.case-card -->
-            <div class="case-card">
-                <div class="image-wrapper">
-                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
-                </div>
-                <div class="text-wrapper">
-                    <div class="title">Маркизы и перголы в Москве</div>
-                    <div class="hr"></div>
-                    <div class="pair">
-                        <div class="col">
-                            <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-            <!-- /.case-card -->
-            <div class="case-card">
-                <div class="image-wrapper">
-                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
-                </div>
-                <div class="text-wrapper">
-                    <div class="title">Маркизы и перголы в Москве</div>
-                    <div class="hr"></div>
-                    <div class="pair">
-                        <div class="col">
-                            <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-            <!-- /.case-card -->
-            <div class="case-card">
-                <div class="image-wrapper">
-                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
-                </div>
-                <div class="text-wrapper">
-                    <div class="title">Маркизы и перголы в Москве</div>
-                    <div class="hr"></div>
-                    <div class="pair">
-                        <div class="col">
-                            <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-            <!-- /.case-card -->
-            <div class="case-card">
-                <div class="image-wrapper">
-                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
-                </div>
-                <div class="text-wrapper">
-                    <div class="title">Маркизы и перголы в Москве</div>
-                    <div class="hr"></div>
-                    <div class="pair">
-                        <div class="col">
-                            <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-            <!-- /.case-card -->
-            <div class="case-card">
-                <div class="image-wrapper">
-                    <img class="lazy" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/cases/biznesrost-case-1.jpg" alt="Маркизы и перголы в Москве">
-                </div>
-                <div class="text-wrapper">
-                    <div class="title">Маркизы и перголы в Москве</div>
-                    <div class="hr"></div>
-                    <div class="pair">
-                        <div class="col">
-                            <span class="gray-text">Сайт каталог</span>
-                            <a href="http://pergoly-markizy.ru/" target="_blank" class="link">pergoly-markizy.ru</a>
-                        </div>
-                        <div class="col">
-                            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
-                        </div>
-                    </div>
-                </div>               
-            </div>
-            <!-- /.case-card -->
-        </div>
-        <!-- /.cases-container -->
-        <div class="text-center">
-            <a href="#" class="btn btn-with-case">Перейти в портфолио</a>
-        </div>
-    </div>
-</div>
-<!-- /#cases.section -->
+
+<?php get_template_part('templates/parts/cases') ?>
+
 <div class="section lazy" id="reviews" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/mountains-bg.jpg">
     <div class="container">
         <div class="h2">Отзывы</div>
         <div class="h2-primary">Что о нас говорят?</div>
 
-        <div class="rewiews">
-            <div class="rewiew">
-                <div class="pair">
-                    <div>
-                        <div class="title">ООО «Глонасс Северо-Запад»</div>
-                        <a href="http://glonassnw.ru/" class="link" target="_blank">glonassnw.ru</a>
-                    </div>
-                    <div class="navigation">
-                        <div class="arrow-left"></div>
-                        <div class="pair-2">
-                            <div class="digits">
-                                <div class="digit">1</div>
-                                 /8
-                                
-                            </div>
-                            <div class="text">
-                                отзыв
-                                </div>
-                        </div>
-                        <div class="arrow-right"></div>
-                    </div>
-                </div>
-                <div class="paragraph">
-                    <img src="<?php bloginfo('template_url') ?>/src/img/icons/quote.svg" alt="quote" class="quote">
-                    <p>ООО «Глонасс Северо-Запад» выражает искреннюю признательность компании Бизнес Рост за оперативное создание посадочной страницы (Landing Page) для нашей организации. Хотели бы поблагодарить за высокий профессионализм, творческий подход. Все наши пожелания были учтены и реализованы, несмотря на то, что наша компания предоставляет довольно специфические услуги, где непросто разобраться. Был очень грамотно проведен маркетинговый аудит, вследствие чего, нам практически не пришлось вносить корректировки. Работа была выполнена оперативно и качественно.</p>
-                </div>
-            </div>
-            <div id="slider">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-1.jpg" alt="biznesrost-sertificate-1" class="lazy">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-2.jpg" alt="biznesrost-sertificate-2" class="lazy">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-3.jpg" alt="biznesrost-sertificate-3" class="lazy">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-4.jpg" alt="biznesrost-sertificate-4" class="lazy">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-5.jpg" alt="biznesrost-sertificate-5" class="lazy">
-            </div>
-        </div>
+        <?php get_template_part('templates/parts/reviews') ?>
 
-        <div class="videos">
-            <div class="video-card">
-                <div class="youtube" data-embed="gUuX137LgrU">
-                    <div class="play-button"></div>
-                </div>
-                <div class="text">
-                    <div class="title">Ирина Овчинникова</div>
-                    <div class="pair">
-                        <p class="gray-text">Психолог</p>
-                        <a href="https://www.navigatorpojizni.ru/" class="link" target="_blank">navigatorpojizni.ru</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /.video-card -->
-            <div class="video-card">
-                <div class="youtube" data-embed="g9tDGWTVpEQ">
-                    <div class="play-button"></div>
-                </div>
-                <div class="text">
-                    <div class="title">Гуков Андрей</div>
-                    <div class="pair">
-                        <p class="gray-text">Мануальный терапевт. Невролог. Гирудотерапевт</p>
-                        <a href="https://drgukov.ru/" class="link" target="_blank">drgukov.ru</a>
-                    </div>
-                </div>
-            </div>
-             <!-- /.video-card -->
-             <div class="video-card">
-                <div class="youtube" data-embed="Nm643HHN_2s">
-                    <div class="play-button"></div>
-                </div>
-                <div class="text">
-                    <div class="title">Ищенко Сергей</div>
-                    <div class="pair">
-                        <p class="gray-text">Корпоративный юрист. Адвокат. Медиатор.</p>
-                        <!-- <a href="https://drgukov.ru/" class="link" target="_blank">drgukov.ru</a> Руководитель группы компаний «Гефест Капитал» -->
-                    </div>
-                </div>
-            </div>
-             <!-- /.video-card -->
-             <div class="video-card">
-                <div class="youtube" data-embed="e4SDWh_B23g">
-                    <div class="play-button"></div>
-                </div>
-                <div class="text">
-                    <div class="title">Шишенко Денис</div>
-                    <div class="pair">
-                        <p class="gray-text">Генеральный директор ООО "ЛОРД"</p>
-                        <a href="https://lord-print.ru/" class="link" target="_blank">lord-print.ru</a>
-                    </div>
-                </div>
-            </div>
-             <!-- /.video-card -->
-             <div class="video-card">
-                <div class="youtube" data-embed="VZUj_NiCVGM">
-                    <div class="play-button"></div>
-                </div>
-                <div class="text">
-                    <div class="title">Павел Иванов</div>
-                    <div class="pair">
-                        <p class="gray-text">Руководитель группы компаний «Гефест Капитал»</p>
-                        <!-- <a href="https://drgukov.ru/" class="link" target="_blank">drgukov.ru</a> Руководитель группы компаний «Гефест Капитал» -->
-                    </div>
-                </div>
-            </div>
-             <!-- /.video-card -->
-             <div class="video-card">
-                <div class="youtube" data-embed="K2bsYnIKB-w">
-                    <div class="play-button"></div>
-                </div>
-                <div class="text">
-                    <div class="title">Хоменко Виталий</div>
-                    <div class="pair">
-                        <p class="gray-text">Директор компании "Климат24"</p>
-                        <a href="https://климат24.бел/" class="link" target="_blank">климат24.бел</a>
-                    </div>
-                </div>
-            </div>
-             <!-- /.video-card -->
-        </div>
+        <?php get_template_part('templates/parts/videos') ?>
 
         <div class="h3 h3-style-2">Нам доверяют</div>
-        <div class="brands-grid">
-            <?php $brandName = [
-                "nissan",
-                "agronovia",
-                "rosstrans",
-                "gefest",
-                "bosh",
-                "avon",
-                "tricolor",
-                "belinka",
-                "glonas",
-                "rancio",
-                "citroen",
-                "aurora",
-                "limadas",
-                "markizy",
-                "neva",
-                "alfa",
-                "germes",
-                "lord",
-                "divi",
-                "gid",
-                "odv",
-                "cp",
-                "palas",
-                "art",
-                "aresa-logo",
-                "klimolog",
-                "hdlt",
-                "balash",
-                "luck-repair",
-                "alive-stone",
-                "radamir",
-                "rivera",
-                "gardian",
-                "autnova",
-                "nettlebox",
-                "avtospas",
-                "clickmebel"
-            ]; 
-            for($i = 0; $i <= 36; $i++) : ?>
-            <div class="brand brand-<?=$i+1?>">
-                <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/<?=$brandName[$i]?>.png" alt="<?=$brandName[$i]?>" class="lazy">
-            </div>
-            <?php endfor; ?>
-        </div>
+        <?php get_template_part('templates/parts/brands-grid') ?>
     </div>
 </div>
 <!-- /#reviews.section -->
@@ -574,10 +219,11 @@ get_header();
                 <a href="#popup1" rel="modal:open" class="btn btn-primary btn-lg btn-shadow i-msg">Бесплатная консультация</a>
 
                 <div class="social-links">
-                    <a href="#" class="btn btn-viber">Viber</a>
-                    <a href="#" class="btn btn-whatsapp">WhatsApp</a>
-                    <a href="#" class="btn btn-telegram">Telegram</a>
-                </div>
+                    <a href="<?=VIBER_LINK?>" class="btn btn-viber viber-desktop">Viber</a>
+                    <a href="<?=VIBER_MOBILE_LINK?>" class="btn btn-viber viber-mobile">Viber</a>
+                    <a href="<?=WHATSAPP_LINK?>" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+                    <a href="<?=TELEGRAM_LINK?>" target="_blank" class="btn btn-telegram">Telegram</a>
+                </div>	
             </div>
             <div class="col-right">
                 <div id="map"></div>
@@ -587,5 +233,6 @@ get_header();
 </div>
 <!-- /#contacts.section -->
 
+</div>
 
 <?php get_footer(); ?>

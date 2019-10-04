@@ -42,6 +42,8 @@
 @import "components/buttons";
 @import "components/langs";
 @import "components/popups";
+@import "components/tabs";
+@import "components/breadcrumbs";
 
 // Layouts
 @import "layout/mobile-navbar";
@@ -51,3 +53,14 @@
 
 // Pages
 @import "pages/main";
+@import "pages/_articles";
+@import "pages/_seo";
+@import "pages/site-creating";
+@import "pages/context-ad";
+@import "pages/tech-maintence";
+@import "pages/clients";
+@import "pages/contacts";
+@import "pages/team";
+@import "pages/design";
+@import "pages/youtube";
+@import "pages/portfolio";

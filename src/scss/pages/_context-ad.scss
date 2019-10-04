@@ -1,0 +1,21 @@
+.context-ad-page {
+    .hero-right{       
+        justify-content: center;
+        @include xl-block() {
+            justify-content: flex-start;
+        } 
+    }
+    ol.style-1 {
+        li {
+            margin-bottom: -3rem;
+            &::before {
+                width: 6rem;
+            }
+        }
+    }
+    .seo-cases {
+        .seo-case {
+            padding: 3rem 0;
+        }
+    }
+}

@@ -68,11 +68,9 @@
                 }
             }
         }
-        
     }
-    &.btn-primary {
-        padding: 1.5rem 4.7rem 1.5rem 2.4rem;
-
+    &.btn-primary,
+    &.btn-primary-left {
         background-color: $primary;
         border-radius: 2.4rem;
         color: $white;
@@ -81,6 +79,10 @@
         position: relative;
 
         vertical-align: sub;
+    }
+    &.btn-primary {
+        padding: 1.5rem 4.7rem 1.5rem 2.4rem;
+        
         &:after {
             font-family: "Font Awesome 5 Free"; 
             font-weight: 900; 
@@ -97,6 +99,33 @@
                 right: -1rem;
                 opacity: 0;
             }
+        }
+    }
+    &.btn-primary-left {
+        padding: 1.5rem 2.4rem 1.5rem 4.7rem;
+
+        &:before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f060";
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-40%);
+            transition: .3s ease-out;
+            left: 2.5rem;
+        }
+        &:hover {
+            padding: 1.5rem 3.5rem 1.5rem  3.6rem;
+            &:before {
+                left: -1rem;
+                opacity: 0;
+            }
+        }
+    }
+    &.btn-opacity {
+        opacity: .6;
+        &:hover {
+            opacity: 1;
         }
     }
     &.btn-sm {
@@ -196,9 +225,22 @@
             content: "\f086";
         }
     }
+    &.btn-form {
+        width: 30rem;
+        max-width: 100%;
+        text-align: center;
+        padding: 2.3rem;
+        margin: 2rem 0 2rem;
+        border-radius: 3.1rem;
+        font-size: 1.6rem;
+        background-color: $primary;
+        color: $white;
+        font-weight: 700;
+    }
 }
 
 .social-toggle {
+    position: relative;
     width: 2.1rem;
     height: 2.1rem;
     margin-left: 1rem;
@@ -209,6 +251,33 @@
     position: relative;
 
     z-index: 20;
+    .social-menu {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        right: 0;
+        top: 2rem;
+        background-color: #fff;
+        width: 22rem;
+        padding: 3rem;
+        border-radius: 1rem;
+        .foot {
+            border-top: 1px solid #ededed;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            font-size: 1.2rem;
+            .gray-text {
+                margin-bottom: .5rem;
+                color: #838d99;
+            }
+            .work-time {
+                display: flex;
+                justify-content: space-between;
+                color: #678091;
+                font-weight: 700;
+            }
+        }
+    }
     i {
         position: absolute;
         top: 50%;
@@ -276,4 +345,8 @@
     &.active .bottom {
         stroke-dashoffset: -132px;
     }
+}
+
+#true_loadmore{
+	margin: auto;
 }

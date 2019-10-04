@@ -1,0 +1,32 @@
+.contacts-page,
+.team-page,
+.reviews-page {
+    .contacts-card {
+        margin-top: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        .col-left {
+            padding: 9rem 2rem 9rem 8rem;
+        }
+    }
+}
+.contacts-page,
+.team-page {
+    #reviews {
+        padding-top: 0;
+        background-size: cover;
+        padding-bottom: 20rem;
+    }
+    .h2-primary {
+        margin-bottom: 6.5rem;
+    }
+}
+.reviews-page {
+    #reviews {
+        background-size: contain;
+        background-position: top center;
+        background-color: #f3f7fa;
+    }
+}
+

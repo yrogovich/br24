@@ -1,8 +1,11 @@
 header {
     background: $white;
-    @include sm(background, $white url('../img/main-bg.webp') center / cover no-repeat);
-    min-height: 80.4rem;
-    @include sm(min-height, 96.4rem);
+    @include sm(background, $white url('../img/main-bg.png') center / cover no-repeat);
+    min-height: 73rem;
+    @include sm(min-height, 83.2rem);
+    .container {
+        transition: .5s;
+    }
     .typewrite {
         display: block;
         @include md(display, inline-block);
@@ -12,7 +15,7 @@ header {
 }
 .hero {
     @include row-flex();
-    @include lg(margin-top, 13rem);
+    @include lg(padding-top, 11rem);
 
     text-align: center;
     @include lg(text-align, left);
@@ -32,6 +35,9 @@ header {
             white-space: wrap;
            
             @include lg(white-space, nowrap);
+        }
+        .btn.btn-lg {
+            margin-bottom: 5rem;
         }
     }
     &-right {
@@ -104,7 +110,7 @@ header {
         }
         picture,
         img {
-            z-index: 1;          
+            z-index: 1;      
         }
         picture {
             margin: 20px;
@@ -118,7 +124,6 @@ header {
     @include row-flex();
 
     margin: 4rem 0;
-    @include lg(margin-top, 8.8rem);
 
     .main-feature {
         @include col();

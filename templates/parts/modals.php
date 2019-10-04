@@ -34,7 +34,7 @@
 		<div class="content">
 			<div class="title">
 				<div class="h">Оставить заявку</div>
-				<div class="sub-h">Оставьте свои контакты,  что бы мы могли связаться с Вами</div>
+				<div class="sub-h">Оставьте свои контакты, что бы мы могли связаться с Вами</div>
 			</div>
 			<form action="javascript:" onsubmit="callHandler('#request-form')" id="request-form">
 				<input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">

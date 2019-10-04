@@ -28,16 +28,16 @@
 					<a href="#popup1" rel="modal:open" class="btn btn-inverse-2">Бесплатная консультация</a>
 
 					<div class="social">
-						<a class="btn-container vk" href="#">
+						<a class="btn-container vk" href="https://vk.com/club149166591" target="_blank">
 							<i class="fab fa-vk"></i>
 						</a>
-						<a class="btn-container facebook" href="#">
+						<a class="btn-container facebook" href="https://www.facebook.com/biznesrost2424/" target="_blank">
 							<i class="fab fa-facebook-f"></i>
 						</a>
-						<a class="btn-container instagram" href="#">
+						<a class="btn-container instagram" href="https://www.instagram.com/biznesrost24/" target="_blank">
 							<i class="fab fa-instagram"></i>
 						</a>
-						<a class="btn-container youb" href="#">
+						<a class="btn-container youb" href="https://www.youtube.com/channel/UC_betS-0uuXUuiq1lhIx6GQ" target="_blank">
 							<i class="fab fa-youtube"></i>
 						</a>
 					</div>
@@ -62,12 +62,18 @@
 				
 				<div class="col col-sm">
 					<div class="title">О нас</div>
-					<ul class="footer-menu">
-						<li><a href="#">Клиенты</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Команда </a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
+					<?php 
+					wp_nav_menu( [
+						'menu'            => 'menu_footer', 
+						'menu_class'      => 'footer-menu', 
+						'menu_id'         => 'footer-menu_top',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					] ); 
+					?>
 				</div> 
 				<div class="col">
 					<div class="title">Обратная связь</div>
@@ -81,7 +87,7 @@
 		<div class="copyrights">
 			<div class="container">
 				<span class="copyright">Copyright © 2010 — <?php echo date('Y'); ?>  Компания «БИЗНЕС РОСТ» | Агенство эффективного интернет-маркетинга</span>
-				<a href="#" class="privacy-politics">Политика конфедециальности</a>
+				<a href="<?php echo get_home_url(null, 'privacy-policy/') ?>" class="privacy-politics">Политика конфедециальности</a>
 			</div>
 		</div>
 		<!-- /.copyrights -->
@@ -110,10 +116,11 @@
 			<a href="tel:<?=PHONE_HREF?>" class="phone-link"><?=PHONE?></a>
 
 			<div class="social-links">
-				<a href="#" class="btn btn-viber">Viber</a>
-				<a href="#" class="btn btn-whatsapp">WhatsApp</a>
-				<a href="#" class="btn btn-telegram">Telegram</a>
-			</div>			
+				<a href="<?=VIBER_LINK?>" class="btn btn-viber viber-desktop">Viber</a>
+				<a href="<?=VIBER_MOBILE_LINK?>" class="btn btn-viber viber-mobile">Viber</a>
+				<a href="<?=WHATSAPP_LINK?>" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+				<a href="<?=TELEGRAM_LINK?>" target="_blank" class="btn btn-telegram">Telegram</a>
+			</div>		
 		</div>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 html {
 	font-size: 62.5%;	
+	scroll-behavior: smooth;
   }
 
 body {
@@ -62,7 +63,8 @@ p {
 	}
 }
 
-.h1 {
+.h1,
+h1 {
 	font-size: 2rem;
 	color: $black;
 	font-weight: 900;
@@ -76,10 +78,15 @@ p {
 	}
 	@include md-block() {
 		font-size: 4.2rem;
-		line-height: 6.951rem;
+		
 	}
 }
 
+h2 {
+	@include sm(font-size, 2.4rem);
+	font-size: 1.9rem;
+	font-weight: 700;
+}
 .h2 {
 	position: absolute;
 	top: 4rem;
@@ -89,9 +96,9 @@ p {
 	color: #f5f8fe;
 	//font-size: 7rem;
 	font-size: 5rem;
-	@include sm(font-size, 10rem);
-	@include md(font-size, 12rem);
-	@include xl(font-size, 20rem);
+	// @include sm(font-size, 11vmax);
+	// @include md(font-size, 10vmax);
+	@include sm(font-size, 10vmax);
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
@@ -116,7 +123,9 @@ p {
         display: block;
     }
 }
-.h3 {
+
+.h3,
+h3 {
 	@include sm(font-size, 2.2rem);
 	font-size: 1.8rem;
 	font-weight: 700;
@@ -132,6 +141,12 @@ p {
 		height: 0.4rem;
 		background-color: $primary;
 	}
+}
+h4,.h4 {
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
 }
 
 .row {
@@ -217,3 +232,213 @@ ymaps,#map {
 	top: 0;
 	left: 0;
 }
+
+.yandex{
+	display: inline-block;
+	&:first-letter {
+		color: #f41b0a;
+	}
+}
+
+.google {
+	white-space: nowrap;
+	.char1,
+	.char4{
+		color: #0086f8;
+	}
+	.char2,
+	.char6 {
+		color: #f41b0a;
+	}
+	.char3 {
+		color: #ffbe00;
+	}
+	.char5 {
+		color: #00aa4c;
+	}
+
+	.char2,
+	.char3,
+	.char4,
+	.char5,
+	.char6 {
+		margin-left: -.3rem;
+	}
+}
+
+ul.flags {
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		flex: 1 1 50%;
+		margin-bottom: 1.5rem;
+		font-size: 1.3rem;
+		color: #838F9C;
+
+		display: flex;
+		align-items: center;
+		&:before {
+			display: inline-block;
+			margin-right: 1.5rem;
+		}
+		&.by:before {
+			content: url('../img/flags/Belarus.png');
+		}
+		&.en:before {
+			content: url('../img/flags/England.png');
+		}
+		&.ru:before {
+			content: url('../img/flags/Russia.png');
+		}
+		&.cz:before {
+			content: url('../img/flags/Czechia.png');
+		}
+		&.kz:before {
+			content: url('../img/flags/Kazakhstan.png');
+		}
+	}
+}
+
+.viber-mobile {
+	@media (min-width: $md) {
+		display: none!important;
+	}
+}
+.viber-desktop {
+	@media (max-width: $md) {
+		display: none!important;
+	}
+}
+
+ol.style-1{
+	list-style: none;
+	counter-reset: count; 
+	margin: 0;
+	padding: 0;
+
+	li{
+		position: relative;
+		display: flex;
+		align-items: center;
+		@include sm(margin-bottom, 0);
+		margin-bottom: 2rem;
+
+		.block {
+			font-size: 1.3rem;
+			color: $gray-text;
+			text-align: left;
+		}
+		.title {
+			font-size: 1.6rem;
+			font-weight: 700;
+			display: block;
+			margin-bottom: 1rem;
+			color: $black;
+			position: relative;
+			&:before {
+				content: url('../img/seo-page/arrow-logo.svg');
+				position: absolute;
+				left: -1.8rem;
+				top: 50%;
+				transform: translate(-100%,-50%);
+				animation: blink 6s infinite;
+			}
+		}
+		&:first-child .title:before{
+			animation-delay: 0s;
+		}
+		&:nth-child(2) .title:before{
+			animation-delay: .5s;
+		}
+		&:nth-child(3) .title:before{
+			animation-delay: 1s;
+		}
+		&:nth-child(4) .title:before{
+			animation-delay: 1.5s;
+		}
+		&:nth-child(5) .title:before{
+			animation-delay: 2s;
+		}
+		&:before {
+			counter-increment: count;   
+			content: counter(count);
+			display: inline-block;
+
+			@include sm(width, 6rem);
+			width: 9rem;
+
+			font-size: 10rem;
+			font-weight: 700;
+			opacity: .3;
+			text-align: center;
+			color: $primary;
+			margin-right: 2rem;
+		}
+	}
+	@keyframes blink {
+		0%{
+			filter: brightness(1)
+		}
+		40% {
+			filter: brightness(1.6);
+		}
+		70% {
+			filter: brightness(1)
+		}
+	}
+}
+.input-wrapper {
+	display: inline-block;
+	position: relative;
+	margin: 1rem 0;
+
+	input,
+	textarea {
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		padding: 1.8rem;
+		resize: vertical;  
+		min-height: 6rem;
+		max-height: 50rem;
+		
+		border-radius: 2.6rem;
+		background-color: #f0f2f7;
+		border: 0.1rem solid #e3e8f0;
+		&:hover {
+			box-shadow: 0 0 .6rem rgba(0, 202, 255, 0.6);
+		}
+		&:focus {
+			outline: none;
+			border-color: $primary; 
+			box-shadow: 0 0 .6rem rgba(0, 202, 255, 0.6);
+		}
+	}
+	
+	
+	&.icon {
+		input {
+			padding-left: 4rem;
+		}
+		&:before {
+			font-family: "Font Awesome 5 Free"; 
+			font-weight: 900; 
+			content: "\f061";
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			left: 2rem;
+		}
+	}
+	&.i-user:before {
+		content: "\f007";
+	}
+	&.i-mail:before {
+		content: "\f0e0";
+	}
+	&.i-phone:before {
+		content: "\f095";
+	}
+}
+

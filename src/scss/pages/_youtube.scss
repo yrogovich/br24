@@ -1,0 +1,23 @@
+.youtube-page {
+    .videos {
+        margin: 0;
+        .video-card {
+            .text {
+                padding: 2rem 3rem;
+            }
+            .title {
+                border-left: 3px solid $primary;
+                padding: 1rem;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .video-card {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    }
+    #seo-cases {
+        padding-bottom: 0;
+    }
+}

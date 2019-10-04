@@ -3,6 +3,68 @@
      * When DOM is ready
      */
     $(document).ready(function(){
+        SmoothScroll({ 
+            animationTime: 800,
+            stepSize: 85 
+        });
+        
+        // Lazyloading
+        $('.lazy').Lazy({
+            // your configuration goes here
+            scrollDirection: 'vertical',
+            effect: 'fadeIn',
+            effectTime: 500,
+            //threshold: 0,
+            visibleOnly: true,
+            onError: function(element) {
+                console.log('error loading ' + element.data('src'));
+            }
+        });
+
+        // Tabs script
+        if($(location).attr('hash')) {
+            var activeTab = $(location).attr('hash');
+        }
+        else {
+            var activeTab = $('#tabs .tabs-nav li:first-child a').attr("href");
+        }
+        
+        activateTab();
+        
+        $("#tabs .tabs-nav a").click(function(e) {
+            deactivateTabs();
+            activeTab = $(this).attr("href");
+            activateTab();
+            return false;
+        });
+        
+        function activateTab() {
+            $(activeTab).addClass('active');
+            $('#tabs .tabs-nav li a[href="'+activeTab+'"]').addClass('active');
+        }
+        function deactivateTabs() {
+            $(activeTab).removeClass('active');
+            $('#tabs .tabs-nav li a[href="'+activeTab+'"]').removeClass('active');
+        }
+
+        $('.show-all').nextAll('.seo-case').fadeOut();
+
+        $('.show-all').click(function(){
+            $(this).slideToggle();
+            toggleCases(this);
+            
+            return false;
+        });
+        
+        function toggleCases(object) {
+            $(object).nextAll('.seo-case').fadeToggle("slow")
+        }
+
+        // Mobile menu handler
+        $(".mobile-menu-toggle").click(function() {
+            $(".mobile-navbar").toggleClass("active");
+            $('body').toggleClass("overflow");     
+        });
 
         // Modal script
         $('a[rel="modal:open"]').click(function() {
@@ -19,35 +81,6 @@
                 $('.overlay').removeClass('active');
             }
         });
-
-
-        // Lazyloading
-        $('.lazy').Lazy({
-            // your configuration goes here
-            scrollDirection: 'vertical',
-            effect: 'fadeIn',
-            effectTime: 500,
-            //threshold: 0,
-            visibleOnly: true,
-            onError: function(element) {
-                console.log('error loading ' + element.data('src'));
-            }
-        });
-
-        // Masks for input
-        $('.phone-mask').mask('+375 (00) 000-00-00');
-
-        //  Show ymaps on scroll
-        var point = $('#services');
-        var pointTop = point.offset().top;
-        var handler = function () {
-            var windowTop = $(this).scrollTop();
-            if (windowTop > pointTop) {
-                $('#map').html('<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac7d87e8430b4178367d02f242d76645b79b73607df715017ad24b72553e52d29&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>');
-                $(window).unbind( "scroll", handler );
-            }
-        };
-        $(window).bind( "scroll", handler );  
 
         // function counter() {
             $('.count').each(function() {
@@ -83,7 +116,7 @@
                 li$.removeClass('active');
                 li$.parent('ul').find('li.current').addClass('active');
             });
-
+        
         $.fn.parallax = function(resistance, mouse) {
             $el = $(this);
             TweenLite.to($el, 0.2, {
@@ -98,26 +131,7 @@
             $(".circle-3").parallax(-25, e);
             $(".circle-4").parallax(40, e);
             $(".circle-5").parallax(80, e);
-        });
-
-        // Mobile menu handler
-        $(".mobile-menu-toggle").click(function() {
-            $(".mobile-navbar").toggleClass("active");
-            $('body').toggleClass("overflow");     
-        });
-
-        if('#slider') {
-            var carousel = $("#slider").waterwheelCarousel({
-                separation: 85,
-                keyboardNav: true
-            });
-            $(".arrow-left").click(function(){
-                carousel.next()
-            });
-            $(".arrow-right").click(function(){
-                carousel.prev()
-            });
-        }
+        });  
     });
 
 })(jQuery); // <----- jQuery no conflict wrapper
@@ -185,17 +199,17 @@ window.onload = function() {
 	for (var i = 0; i < youtube.length; i++) {		
 		var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";		
 		var image = new Image();
-				image.src = source;
-				image.addEventListener( "load", function() {
-					youtube[ i ].appendChild( image );
-				}( i ) );		
-				youtube[i].addEventListener( "click", function() {
-					var iframe = document.createElement( "iframe" );
-							iframe.setAttribute( "frameborder", "0" );
-							iframe.setAttribute( "allowfullscreen", "" );
-							iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
-							this.innerHTML = "";
-							this.appendChild( iframe );
-				} );	
+        image.src = source;
+        image.addEventListener( "load", function() {
+            youtube[ i ].appendChild( image );
+        }( i ) );		
+        youtube[i].addEventListener( "click", function() {
+            var iframe = document.createElement( "iframe" );
+                    iframe.setAttribute( "frameborder", "0" );
+                    iframe.setAttribute( "allowfullscreen", "" );
+                    iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+                    this.innerHTML = "";
+                    this.appendChild( iframe );
+        } );	
 	};	
 })();
