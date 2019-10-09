@@ -1,5 +1,6 @@
 .btn {
     display: inline-block;
+    position: relative;
     text-decoration: none;
     border: none;
     transition: .2s ease-out;
@@ -8,6 +9,9 @@
     }
     &:hover {
         cursor: pointer;
+    }
+    &:focus {
+        outline: none;
     }
     &.btn-inverse {
         font-size: 1.2rem;
@@ -236,6 +240,22 @@
         background-color: $primary;
         color: $white;
         font-weight: 700;
+        &:after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f061";
+            position: absolute;
+            top: 50%;
+            transform: translate(0,-40%);
+            transition: .3s ease-out;
+            right: 4rem;
+        }
+        &:hover {
+            &:after {
+                right: -1rem;
+                opacity: 0;
+            }
+        }
     }
 }
 
@@ -285,14 +305,6 @@
         transform: translate(50%,-50%);
         color: $white;
         animation: rotateOut .3s;
-    }
-    &:hover {
-        opacity: 1;
-        cursor: pointer;
-        i {
-            transform: translate(55%, -55%) rotate(180deg);
-            animation: rotateIn .3s;
-        }
     }
     @keyframes rotateIn {
         0% {

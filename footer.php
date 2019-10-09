@@ -138,11 +138,16 @@
 			data: msg,
 			success: function(data) {
 				console.log('form ok');
-				window.location.hash = "#popup-thx";
+				jQuery(".overlay").removeClass("active");
+				jQuery("#popup-thx").addClass("active");
+				setTimeout(() => {
+					jQuery("#popup-thx").removeClass("active");
+				}, 3000);
 				return false;
 			},
 			error: function () {
 				console.log('form error');
+				jQuery(".overlay").removeClass("active");
 				window.location.hash = "#";
 			}
 		});

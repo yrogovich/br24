@@ -6,11 +6,19 @@
         <div class="cases-container">
         <?php 
                 // задаем нужные нам критерии выборки данных из БД
-                $args = array(
+                // $args = array(
+                //     'posts_per_page' => 6,
+                //     'post_type' => 'portfolio',
+                // );
+                $args = [
                     'posts_per_page' => 6,
                     'post_type' => 'portfolio',
-                );
+                    'post__in' => [
+                        155,141,121,117,108,95
+                    ]
+                ];
 
+                
                 $query = new WP_Query( $args );
 
                 // Цикл

@@ -6,11 +6,15 @@
 
 ul.primary,
 .article ul {
+    color: inherit;
     margin-left: 2rem;
     li {
         margin-left: 1.8rem;
         text-indent: -1.8rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        span {
+            text-indent: 0;
+        }
         &:before {
             content: '';
             width: .7rem;

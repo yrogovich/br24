@@ -55,6 +55,32 @@ get_header();
     </div>
 </header>
 
+<div class="section sticky-section animationFadeIn" id="stock">
+    <div class="container">
+        <div class="banner-container">           
+            <p class="warning-text">Это нельзя пропустить!</p>
+            <div class="banner">
+                <img class="bage" src="<?php bloginfo("template_url") ?>/src/img/main-page/flag.webp" alt="Акция месяца">
+                <div class="col-left">
+                    <picture>
+						<source type="image/webp" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/banner.webp">
+						<source type="image/png" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/banner.png">
+						<img class="lazy" style="margin-bottom: -4px;" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/banner.webp" alt="1 месяц SEO продвижения">
+					</picture>
+                </div>
+                <div class="col-right">
+                    <p class="banner-header">
+                    1 месяц SEO продвижения в подарок
+                    </p>
+                    <p class="banner-text">Оставьте заявку, что бы мы забронировали за вами бонус. Акция действует до 1 <?php echo MONTH[date('n')]; ?> 2019г.</p>
+                    <a href="#popup-request" rel="modal:open" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#stock.section -->
+
 <div class="section" id="seo-cases">
     <div class="container">
         <div class="h2">Кейсы</div>
@@ -157,6 +183,58 @@ get_header();
                     <!-- /.screnshots -->
                 </div>
                 <!-- /.column-2 -->
+
+                <div class="roistat-section">
+                    <div class="title"><img src="<?php bloginfo('template_url') ?>/src/img/seo-page/roistat.png" alt="roistat"> <h4 class="primary">Пример данных в сезонный месяц (май 2019):</h4></div>
+                    <!-- /.title -->
+                    <div class="wrapper">
+                        <div class="column">
+                            <div class="thin-title">Рекламный трафик:</div>
+
+                            <ul>
+                                <li>2343 посетителей</li>
+                                <li>34 заявки</li>
+                                <li>43 звонка,	77 заявок всего</li>
+                            </ul>
+
+                            <ul>
+                                <li>302000 руб. на Директ</li>
+                                <li>Стоимость заявки <span class="red">3922 руб.</span></li>
+                                <li>Конверсия 3,28 %</li>
+                            </ul>
+                        </div>
+                        <!-- /.column -->
+                        <div class="column">
+                            <div class="thin-title">Органический трафик:</div>
+
+                            <ul>
+                                <li>1130 посетителей</li>
+                                <li>37 заявок</li>
+                                <li>33 звонка,	70 заявок всего</li>
+                            </ul>
+
+                            <ul>
+                                <li>45000 руб. на СЕО</li>
+                                <li>Стоимость заявки <span class="green">642 руб.</span></li>
+                                <li>Конверсия 6,19 %</li>
+                            </ul>
+                        </div>
+                        <!-- /.column -->
+
+                        <div class="column-wide">
+                            <h4 class="primary">Итоги:</h4>
+
+                           <div class="bold">Стоимость заявки из органического трафика
+                           <span class="green">в 6 раз</span> ниже чем из Директа.</div>
+
+                           <div class="bold">Конверсия органического трафика
+                           <span class="green">в 1,9 раз</span> выше чем из Директа</div>
+                        </div>
+                        <!-- /.column -->
+                    </div>
+                    <!-- /.wrapper -->
+                </div>
+                <!-- /.roistat-section -->
             </div>
             <!-- /.seo-case -->
 
@@ -211,6 +289,133 @@ get_header();
             <div class="show-all">
                 <a href="#">Показать ещё кейсы <i class="fas fa-chevron-down"></i></a>
             </div>
+
+            <div class="seo-case">
+                <div class="column-1">
+                    <div class="h4">Проект:</div>
+                    <div class="project-name">Брянск Триколор</div>
+                    <a href="//брянск-триколор.рф/" target="_blank" class="link">брянск-триколор.рф</a>
+                    <div class="thin-text">Сфера:</div>
+                    <p>Услуги по подключению спутникового ТВ</p>
+                    <div class="thin-text">Конкуренция:</div>
+                    <p>Брянская область</p>
+                    <hr>
+                    <div class="h4">Результат:</div>
+                    <ul class="primary">
+                        <li>Расширили семантику и сделали кластеризацию для снижения конкуренции.</li>
+                        <li>На 6-й месяц работ все 724 вышли в ТОП – 8 на первой странице.</li>
+                        <li>На 7-й месяц 6475 привлеченных клиентов в месяц.</li>
+                        <li>Конверсия сайта по запросам «купить» - 4.5-6.7% это ~ 291-433 гарантированных заказов в месяц.</li>
+                    </ul>
+                    <hr>
+                    <div class="h4">Окупаемость:</div>
+                    <p>Затраты на СЕО продвижение за месяц окупаются с 15 заказов.</p>
+                </div>
+                <!-- /.column-1 -->
+
+                <div class="column-2">
+                    <div class="company-logo">
+                        <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/company-logos/tcolor.png" alt="lord">
+                    </div>
+
+                    <div class="screenshots">
+                        <a href="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/tcolor/img-1.jpg" class="screenshot">
+                            <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/thumbs/tcolor/img-1.jpg" alt="screenshot">
+                        </a>
+                        <!-- /.screenshot -->
+                        <a href="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/tcolor/img-2.jpg" class="screenshot">
+                            <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/thumbs/tcolor/img-2.jpg" alt="screenshot">
+                        </a>
+                        <!-- /.screenshot -->
+                        <a href="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/tcolor/img-3.png" class="screenshot">
+                            <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/thumbs/tcolor/img-3.jpg" alt="screenshot">
+                        </a>
+                        <!-- /.screenshot -->
+                    </div>
+                    <!-- /.screnshots -->
+                </div>
+                <!-- /.column-2 -->
+            </div>
+            <!-- /.seo-case -->
+
+            <div class="seo-case">
+                <div class="column-1">
+                    <div class="h4">Проект:</div>
+                    <div class="project-name">Бус Плюс</div>
+                    <a href="//bus-plus.by/" target="_blank" class="link">bus-plus.by</a>
+                    <div class="thin-text">Сфера:</div>
+                    <p>Запчасти для микроавтобусов</p>
+                    <div class="thin-text">Конкуренция:</div>
+                    <p>Республика Беларусь</p>
+                    <hr>
+                    <div class="h4">Результат:</div>
+                    <ul class="primary">
+                        <li>На 3-й месяц более 400 ключей в ТОП-10 и ТОП-20, это 60% всех ключей.</li>
+                        <li>Около 200 клиентов из поиска в месяц.</li>
+                        <li>Ключ "рессоры Гомель" уже в ТОП-1 (т.е. первый в органической выдаче). По этому запросу за 1,5 месяца опередили в выдаче прямого конкурента. Ниша очень конкурентная по стране.</li>
+                        <li>Конверсия по сайту в целом порядка 10%, это ~ 20 гарантированных продаж в месяц.</li>
+                    </ul>
+                    <hr>
+                    <div class="h4">Окупаемость:</div>
+                    <p>Средний чек 200$. Т.е. фактически затраты на СЕО за месяц окупаются с одного заказа.</p>
+                </div>
+                <!-- /.column-1 -->
+
+                <div class="column-2">
+                    <div class="company-logo">
+                        <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/company-logos/bus-plus.png" alt="lord">
+                    </div>
+
+                    <div class="screenshots">
+                        <a href="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/bus-plus/img-1.jpg" class="screenshot">
+                            <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/thumbs/bus-plus/img-1.jpg" alt="screenshot">
+                        </a>
+                        <!-- /.screenshot -->
+                    </div>
+                    <!-- /.screnshots -->
+                </div>
+                <!-- /.column-2 -->
+            </div>
+            <!-- /.seo-case -->
+
+            <div class="seo-case">
+                <div class="column-1">
+                    <div class="h4">Проект:</div>
+                    <div class="project-name">Доктор Гуков</div>
+                    <a href="//drgukov.ru/" target="_blank" class="link">drgukov.ru</a>
+                    <div class="thin-text">Сфера:</div>
+                    <p>Услуги массажа и мануальной терапии</p>
+                    <div class="thin-text">Конкуренция:</div>
+                    <p>Москва и область</p>
+                    <hr>
+                    <div class="h4">Результат:</div>
+                    <ul class="primary">
+                        <li>Полностью новый сайт. Москва - конкуренция очень высокая.</li>
+                        <li>На 2-й месяц работ более 77% ключей в ТОП 10.</li>
+                        <li>Конверсия сайта 2,3%, это ~ 80 гарантированных заказов в месяц.</li>
+                    </ul>
+                    <hr>
+                    <div class="h4">Окупаемость:</div>
+                    <p>Затраты на СЕО продвижение окупаются с продажи 1-го абонимента</p>
+                </div>
+                <!-- /.column-1 -->
+
+                <div class="column-2">
+                    <div class="company-logo">
+                        <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/company-logos/gukov.png" alt="lord">
+                    </div>
+
+                    <div class="screenshots">
+                        <a href="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/gukov/img-1.jpg" class="screenshot">
+                            <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/statistics/thumbs/gukov/img-1.jpg" alt="screenshot">
+                        </a>
+                        <!-- /.screenshot -->
+                    </div>
+                    <!-- /.screnshots -->
+                </div>
+                <!-- /.column-2 -->
+            </div>
+            <!-- /.seo-case -->
         </div>
         <!-- /.seo-cases -->
         
@@ -240,6 +445,11 @@ get_header();
                         <li>Отбор до 10 НЧ ключей, написание SEO-статей (до 20000 знаков), размещение контента на сайте</li>
                         <li>Покупка до 5 вечных ссылок для роста веса</li>
                     </ul>
+                    <p class="bold">Результаты через 6-9 месяцев ведения:</p>
+                    <ul class="primary">
+                        <li>До 300-500 посетителей в месяц (новый сайт)</li>
+                        <li>Вывод до 50 ключей в ТОП 10-20</li>
+                    </ul>
                 </div>
                 <!-- /.body -->
                 <div class="foot">
@@ -250,15 +460,15 @@ get_header();
             </div>
             <!-- /.package -->
 
-            <div class="package">
+            <div class="package best-choice">
                 <div class="head">
                     <div class="img-wrapper">
                         <img src="<?php bloginfo('template_url') ?>/src/img/seo-page/20.png" alt="20">
                     </div>
                     <div class="title">Пакет SEO-20</div>
                     <div class="sub-title">Подходит для классических, более взрослых сайтов.
-Так же для каталогов и для интернет-магазинов
-на начальном этапе</div>
+                    Так же для каталогов и для интернет-магазинов
+                    на начальном этапе</div>
                 </div>
                 <!-- /.head -->
                 <div class="body">
@@ -267,6 +477,11 @@ get_header();
                         <li>Внутренняя оптимизация (сбор и группировка семантического ядра, оптимизация контента, оптимизация навигации)</li>
                         <li>Отбор до 20 НЧ ключей, написание SEO-статей (до 30000 знаков), размещение контента на сайте</li>
                         <li>Покупка до 10 вечных ссылок для роста веса</li>
+                    </ul>
+                    <p class="bold">Результаты через 6-9 месяцев ведения:</p>
+                    <ul class="primary">
+                        <li>До 700-900 посетителей в месяц (новый сайт)</li>
+                        <li>Вывод до 100 ключей в ТОП 10-20</li>
                     </ul>
                 </div>
                 <!-- /.body -->
@@ -293,6 +508,11 @@ get_header();
                         <li>Внутренняя оптимизация (сбор и группировка семантического ядра, оптимизация контента, оптимизация навигации)</li>
                         <li>Отбор до 30 НЧ ключей, написание SEO-статей (до 50000 знаков), размещение контента на сайте</li>
                         <li>Покупка до 15 вечных ссылок для роста веса</li>
+                    </ul>
+                    <p class="bold">Результаты через 6-9 месяцев ведения:</p>
+                    <ul class="primary">
+                        <li>До 3000 посетителей в месяц</li>
+                        <li>Вывод до 150 ключей в ТОП 10-20</li>
                     </ul>
                 </div>
                 <!-- /.body -->
@@ -326,7 +546,7 @@ get_header();
                 </div>
                 <!-- /.body -->
                 <div class="foot">
-                    <div class="price">10 т.р.</div>
+                    <div class="price">12 т.р.</div>
                     <a href="#popup-package-x1" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
                 </div>
                 <!-- /.foot -->
@@ -340,7 +560,7 @@ get_header();
                     </div>
                     <div class="title">Разовая тех.  оптимизация сайта под СЕО</div>
                     <div class="sub-title">+ семантическое ядро и наполнение сайта контентом
-на 20 000 знаков по нужным коммерческим ключам</div>
+                        на 20 000 знаков по нужным коммерческим ключам</div>
                 </div>
                 <!-- /.head -->
                 <div class="body">
@@ -387,6 +607,34 @@ get_header();
         </div>
         <!-- /.packages -->
         
+        <div class="financial-guarantee">
+            <div class="h2-primary">Финансовые гарантии</div>
+            <div class="guarantees">
+                <div class="guarantee">
+                    <div class="guarantee-image img-1"></div>
+                    <!-- /.guarantee-image img-1 -->
+                    <h4 class="title"><div class="primary">Контекстная реклама за наш счет</div> в случае ошибки</h4>
+                    <p>При невыполнения прогноза по трафику мы за свой счет запускаем контекстную рекламу на вашем сайте.</p>
+                </div>
+                <!-- /.guarantee -->
+                <div class="guarantee">
+                    <div class="guarantee-image img-2"></div>
+                    <!-- /.guarantee-image img-2 -->
+                    <h4 class="title"><div class="primary">Финансовая защита от фильтров</div> Яндекса и Google</h4>
+                    <p>В случае попадании сайта под фильтры поисковых систем — все работы по продвижению будут проводиться бесплатно.</p>
+                </div>
+                <!-- /.guarantee -->
+                <div class="guarantee">
+                    <div class="guarantee-image img-3"></div>
+                    <!-- /.guarantee-image img-3 -->
+                    <h4 class="title"><div class="primary">Работаем месяц бесплатно</div> при несоблюдении сроков</h4>
+                    <p>Если работы по продвижению, прописанные в договоре, не выполняются в срок, следущий месяц работаем бесплатно.</p>
+                </div>
+                <!-- /.guarantee -->
+            </div>
+            <!-- /.guarantees -->
+        </div>
+        <!-- /.financial-guarantee -->
     </div>
 </div>
 <!-- /#prices.section -->
@@ -631,6 +879,19 @@ get_header();
             if($('.screenshots a')) {
                 $('.screenshots a').simpleLightbox();
             }
+            //  Add handler for showing world section
+            var handlerWorld = function () {
+                var windowTop = $(this).scrollTop();
+                if (windowTop > 10) {
+                    $('#stock').removeClass("animationFadeIn");
+                    //$(window).unbind( "scroll", handlerWorld );
+                }
+                else {
+                    $('#stock').addClass("animationFadeIn");
+                }
+            };
+            handlerWorld();
+            $(window).bind( "scroll", handlerWorld );  
         });
     })(jQuery); // <----- jQuery no conflict wrapper
 </script>

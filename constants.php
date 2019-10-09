@@ -2,6 +2,9 @@
 define("PHONE", "+375 (44) 729-70-72");
 define("PHONE_HREF", "+375447297072");
 
+define("PHONE_RUS", "+7 (326) 698-99-55");
+define("PHONE_RUS_HREF", "+73266989955");
+
 define('VIBER_LINK', 'viber://chat?number=+375447297072');
 define('VIBER_MOBILE_LINK', 'viber://add?number=375447297072');
 define('WHATSAPP_LINK', 'https://api.whatsapp.com/send?phone=375447297072');

@@ -2,18 +2,26 @@
 ?>
 <div class="single-page">
     <div class="head">
-        <?php get_template_part('templates/parts/breadcrumbs') ?>
+        <div class="breadcrumbs-section">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <a href="<?php echo get_home_url() ?>">Главная</a>      
+                    <a href="<?php echo get_home_url() ?>">Портфолио</a>      
+                    <span ><?php the_title(); ?></span>
+                </div>
+            </div>
+        </div>
 
         <div class="container">
             <div class="h2-primary pseudo-none">
                 <?php 
                     $terms = get_the_terms( $post->ID, 'site_type' ); 
-                    if( $terms ){
-                        $term = array_shift( $terms );
-                        echo $term->name.' ';
-                    } 
+                    // if( $terms ){
+                    //     $term = array_shift( $terms );
+                    //     echo $term->name.' ';
+                    // } 
                     $title = get_the_title();
-                    echo '"'.$title.'"';
+                    echo $title;
                 ?></div>
 
             <div class="big-image">

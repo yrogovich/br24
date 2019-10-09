@@ -15,7 +15,8 @@
 .site-creating-page,
 .context-ad-page,
 .youtube-page,
-.design-page {
+.design-page,
+.tech-maintence-page {
     .hero-right{
         align-items: center;
         margin-top: 2rem;
@@ -40,7 +41,8 @@ header {
        margin-bottom: 3rem;
     }
     ol.style-1 {
-        margin-bottom: 4rem;
+        margin-bottom: 8rem;
+        margin-top: 5rem;
     }
 }
 
@@ -73,6 +75,50 @@ header {
             @include md-block() {
                 padding-right: 3rem;
             };
+        }
+        .roistat-section {
+            margin-top: 5rem;
+            @include md-block(){
+                margin: 5rem;
+                margin-bottom: 0;
+            };
+            padding: 3rem;
+            padding-bottom: 1rem;
+            background-color: $section-gray;
+            width: 100%;
+            .title {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+                img {
+                    margin-bottom: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+            .wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                .column {
+                    flex: 1 1 300px;
+                    .thin-title {
+                        text-transform: uppercase;
+                        color: #bbc2ca;
+                        font-size: 1.2rem;
+                        font-family: 'Montserrat', sans-serif;
+                        margin-bottom: 1rem;
+                    }
+                }
+                .column-wide {
+                    flex: 5 1 300px;
+                }
+                .bold {
+                    color: $gray-text;
+                    margin-bottom: 2rem;
+                }
+                ul {
+                    margin-bottom: 2rem;
+                }
+            }
         }
 
         .thin-text {
@@ -168,6 +214,23 @@ header {
     }
 }
 
+.package,
+.tech-package {
+    position: relative;
+    &.best-choice {
+        &:before {
+            content: '';
+            position: absolute;
+            width: 124px;
+            height: 45px;
+            max-width: 100%;
+            background: url('../img/seo-page/best-choise.png') center / contain no-repeat;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
 .packages {
     @include row-flex();
     justify-content: center;
@@ -185,6 +248,8 @@ header {
         position: relative;
         display: flex;
         flex-direction: column;
+
+        
 
         .head{
             min-height: 17rem;
@@ -219,6 +284,9 @@ header {
             ul {
                 margin-left: 0;
                 color: #000;    
+            }
+            p {
+                margin-bottom: 1rem;
             }
             .h6 {
                 font-size: 1.2rem;
@@ -271,6 +339,59 @@ header {
         .head {
             .title {
                 font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.financial-guarantee {
+    .h2-primary {
+        @include md(padding-top, 4.8rem);
+        margin-bottom: 5rem;
+    }
+    .guarantees {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+
+        margin: -1.5rem;
+        margin-bottom: 5rem;
+        .guarantee {
+            flex: 1 1 300px;
+            margin: 1.5rem;
+            &-image {
+                height: 8rem;
+                display: block;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: block;
+                margin-bottom: 3rem;
+
+                &.img-1 {
+                    background-image: url('../img/seo-page/guarantees/guarantee-1.png');
+                }
+                &.img-2 {
+                    background-image: url('../img/seo-page/guarantees/guarantee-2.png');
+                }
+                &.img-3 {
+                    background-image: url('../img/seo-page/guarantees/guarantee-3.png');
+                }
+            }
+            .title {
+                &:after {
+                    content: '';
+                    display: block;
+                    margin: 2rem auto;
+                    height: 2px;
+                    width: 8rem;
+                    background-color: $primary;
+                }
+            }
+            p {
+                font-size: 1.3rem;
+                color: $gray-text;
             }
         }
     }

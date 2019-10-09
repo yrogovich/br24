@@ -7,16 +7,25 @@ get_header();
 <div class="portfolio-page">
 
 <div id="portfolio-section">
-    <?php get_template_part('templates/parts/breadcrumbs') ?>
+    <div class="breadcrumbs-section">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="<?php echo get_home_url() ?>">Главная</a>      
+
+                <span >Портфолио</span>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="h2-primary pseudo-none">Наши Работы</div>
 
         <ul class="tabs-nav">
             <li><a href="<?php echo get_home_url(null, 'portfolio/') ?>" class="active">Все</a></li>
-            <li><a href="<?php echo get_home_url(null, 'site_type/landingpage') ?>" >Landing Page</a></li>
             <li><a href="<?php echo get_home_url(null, 'site_type/internet-magaziny') ?>">Интернет магазины</a></li>
+            <li><a href="<?php echo get_home_url(null, 'site_type/sajt-katalog') ?>">Сайты каталоги</a></li>           
             <li><a href="<?php echo get_home_url(null, 'site_type/korporativnye-sajty') ?>">Корпоративные сайты</a></li>
+            <li><a href="<?php echo get_home_url(null, 'site_type/landingpage') ?>" >Landing Pages</a></li>
         </ul>
 
         <div class="cases-container">

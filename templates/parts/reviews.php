@@ -1,16 +1,17 @@
+
 <div class="rewiews">
     <div class="rewiew">
         <div class="pair">
             <div>
                 <div class="title">ООО «Глонасс Северо-Запад»</div>
-                <a href="http://glonassnw.ru/" class="link" target="_blank">glonassnw.ru</a>
+                <a href="//glonassnw.ru" class="link" target="_blank">glonassnw.ru</a>
             </div>
             <div class="navigation">
                 <div class="arrow-left"></div>
                 <div class="pair-2">
                     <div class="digits">
                         <div class="digit">1</div>
-                            /8
+                            / <span class="size">1</span>
                         
                     </div>
                     <div class="text">
@@ -24,29 +25,78 @@
             <img src="<?php bloginfo('template_url') ?>/src/img/icons/quote.svg" alt="quote" class="quote">
             <p>ООО «Глонасс Северо-Запад» выражает искреннюю признательность компании Бизнес Рост за оперативное создание посадочной страницы (Landing Page) для нашей организации. Хотели бы поблагодарить за высокий профессионализм, творческий подход. Все наши пожелания были учтены и реализованы, несмотря на то, что наша компания предоставляет довольно специфические услуги, где непросто разобраться. Был очень грамотно проведен маркетинговый аудит, вследствие чего, нам практически не пришлось вносить корректировки. Работа была выполнена оперативно и качественно.</p>
         </div>
+        <div id="test"></div>
     </div>
     <div id="slider">
-        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-1.jpg" alt="biznesrost-sertificate-1" class="lazy">
-        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-2.jpg" alt="biznesrost-sertificate-2" class="lazy">
-        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-3.jpg" alt="biznesrost-sertificate-3" class="lazy">
-        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-4.jpg" alt="biznesrost-sertificate-4" class="lazy">
-        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-5.jpg" alt="biznesrost-sertificate-5" class="lazy">
+        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-1.jpg" alt="biznesrost-sertificate-1" class="lazy" id="1">
+        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-2.jpg" alt="biznesrost-sertificate-2" class="lazy" id="2">
+        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-3.jpg" alt="biznesrost-sertificate-3" class="lazy" id="3">
+        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-4.jpg" alt="biznesrost-sertificate-4" class="lazy" id="4">
+        <img data-src="<?php bloginfo('template_url') ?>/src/img/reviews/biznesrost-sertificate-5.jpg" alt="biznesrost-sertificate-5" class="lazy" id="5">
     </div>
 </div>
 <script>
 (function($){    
     $(document).ready(function(){
         try {
+            let array = {
+                '1': {
+                    title: "ООО «Глонасс Северо-Запад»",
+                    link: "glonassnw.ru",
+                    paragraph: "ООО «Глонасс Северо-Запад» выражает искреннюю признательность компании Бизнес Рост за оперативное создание посадочной страницы (Landing Page) для нашей организации. Хотели бы поблагодарить за высокий профессионализм, творческий подход. Все наши пожелания были учтены и реализованы, несмотря на то, что наша компания предоставляет довольно специфические услуги, где непросто разобраться. Был очень грамотно проведен маркетинговый аудит, вследствие чего, нам практически не пришлось вносить корректировки. Работа была выполнена оперативно и качественно."
+                },
+                '2': {
+                    title: "ООО «РОССТРАНСЭКСПЕДИЦИЯ»",
+                    link: "tk.rosstrans.ru",
+                    paragraph: "Компании «Бизнес рост» была поставлена задача сделать одностраничный сайт в формате Landing Page, который коротко и ясно мог бы рассказать посетителю об основных услугах компании, интересных реализованных проектах, а также представил бы отзывы наших любимых клиентов. Мы доверили этот проект ребятам из студии «Бизнес рост» и не ошиблись! Сайт был реализован в формате мультилендинга. Сделали несколько страниц по разным нашим направлениям деятельности. Все работы «под ключ» были произведены быстро и оперативно. Команде компании «Бизнес рост» желаем дальнейших успехов в работе и хороших клиентов!"
+                },
+                '3': {
+                    title: "ЧУП 'ЦИФРОВАЯ ПОМОЩЬ'",
+                    link: "спутники.бел",
+                    paragraph: "Благодарим компанию «Бизнес Рост» за профессиональный подход к работе. Строго выдержали сроки создания сайта и настройки контекстной рекламы. Приятно удивило глубокое погружение в проект. В процессе создания сайта было предложено много дополнительных «фишек», о которых мы и не догадывались. После запуска сайта и рекламы, сразу начались звонки и заявки и это при том, что летом в нашей нише не сезон. Окупили все затраты по запуску сайта за 8 дней. Чистая прибыль в первый месяц увеличилась в три раза. Рекламную кампанию в Яндекс.Директ расширили в несколько раз, что принесло увеличение заказов и снижение стоимости покупки. Сразу заказали создание следующего сайта."
+                },
+                '4': {
+                    title: "ООО «АЛЬФАТЕХСИСТЕМ»",
+                    link: "alfaokna.by",
+                    paragraph: "Благодарим компанию «Бизнес Рост» за профессиональный подход к работе. Строго выдержали сроки создания сайта и настройки контекстной рекламы. Приятно удивило глубокое погружение в проект. В процессе создания сайта было предложено много дополнительных «фишек», о которых мы и не догадывались. После запуска сайта и рекламы, сразу начались звонки и заявки и это при том, что летом в нашей нише не сезон. Окупили все затраты по запуску сайта за 8 дней. Чистая прибыль в первый месяц увеличилась в три раза. Рекламную кампанию в Яндекс.Директ расширили в несколько раз, что принесло увеличение заказов и снижение стоимости покупки. Сразу заказали создание следующего сайта."
+                },
+                '5': {
+                    title: "ЧУП 'ЦИФРОВАЯ ПОМОЩЬ'",
+                    link: "спутники.бел",
+                    paragraph: "Благодарим компанию «Бизнес Рост» за профессиональный подход к работе. Строго выдержали сроки создания сайта и настройки контекстной рекламы. Приятно удивило глубокое погружение в проект. В процессе создания сайта было предложено много дополнительных «фишек», о которых мы и не догадывались. После запуска сайта и рекламы, сразу начались звонки и заявки и это при том, что летом в нашей нише не сезон. Окупили все затраты по запуску сайта за 8 дней. Чистая прибыль в первый месяц увеличилась в три раза. Рекламную кампанию в Яндекс.Директ расширили в несколько раз, что принесло увеличение заказов и снижение стоимости покупки. Сразу заказали создание следующего сайта."
+                }
+            }
+            let counter = 1;
+            let size = 5;
+            initSize();
+
             var carousel = $("#slider").waterwheelCarousel({
                 separation: 85,
-                keyboardNav: true
+                keyboardNav: true,
+                movedToCenter: function($newCenterItem) {
+                    var index = $newCenterItem.attr('id');
+                    changeText(array[index], index);
+                    console.log($newCenterItem.attr('id'));
+                }
             });
+
             $(".arrow-left").click(function(){
-                carousel.next()
+                carousel.prev();
             });
             $(".arrow-right").click(function(){
-                carousel.prev()
+                carousel.next();
             });
+
+            function initSize() {
+                $('.rewiew .digits .size').text(size);
+            }
+            function changeText(obj, index) {
+                $('.rewiew .digit').text(index);
+                $('.rewiew .title').text(obj.title);
+                $('.rewiew .link').text(obj.link);
+                $('.rewiew .link').prop("href", '//'+obj.link);
+                $('.rewiew .paragraph p').text(obj.paragraph);
+            }
         } catch (e) {
             console.log(e);
         }

@@ -83,7 +83,7 @@ get_header();
                     </div>
                     <!-- /.body -->
                     <div class="foot">
-                        <div class="price">от 20 т.р.</div>
+                        <div class="price">от 30 т.р.</div>
                         <a href="#popup-buy-landing" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
                     </div>
                     <!-- /.foot -->
@@ -114,7 +114,7 @@ get_header();
                     </div>
                     <!-- /.body -->
                     <div class="foot">
-                        <div class="price">от 30 т.р.</div>
+                        <div class="price">от 50 т.р.</div>
                         <a href="#popup-buy-corp-site" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
                     </div>
                     <!-- /.foot -->
@@ -136,7 +136,6 @@ get_header();
                             <li>Детальный продающий прототип</li>
                             <li>Уникальный дизайн сайта</li>
                             <li>Мобильная версия сайта</li>
-                            <li>Страница "Спасибо"</li>
                             <li>SEO оптимизация</li>
                             <li>Настройка Яндекс Метрики + цели</li>
                             <li>Установка чат-бота на сайт</li>
@@ -147,7 +146,7 @@ get_header();
                     </div>
                     <!-- /.body -->
                     <div class="foot">
-                        <div class="price">от 40 т.р.</div>
+                        <div class="price">от 70 т.р.</div>
                         <a href="#popup-buy-online-shop" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
                     </div>
                     <!-- /.foot -->
@@ -155,71 +154,6 @@ get_header();
                 <!-- /.package -->
             </div>
             <!-- /.packages -->
-
-            <div class="h3">Стоимость технического обслуживания сайтов</div>
-           <div class="tech-packages">
-               <div class="tech-package">
-                   <div class="head">
-                        <div class="img-wrapper">
-                            <img src="<?php bloginfo('template_url') ?>/src/img/creating/time-20.svg" alt="time-20">
-                        </div>
-                        <div class="title">Первые 20 часов работ</div>
-                   </div>
-                   <!-- /.head -->
-                   <div class="foot">
-                        <div class="price">1000 р./ч.</div>
-                        <a href="#popup-tech-time-20" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
-                   </div>
-                   <!-- /.body -->
-               </div>
-               <!-- /.tech-package -->
-               <div class="tech-package">
-                   <div class="head">
-                        <div class="img-wrapper">
-                            <img src="<?php bloginfo('template_url') ?>/src/img/creating/time-50.svg" alt="time-20">
-                        </div>
-                        <div class="title">20-50 часов</div>
-                   </div>
-                   <!-- /.head -->
-                   <div class="foot">
-                        <div class="price">900 р./ч.</div>
-                        <a href="#popup-tech-time-50" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
-                   </div>
-                   <!-- /.body -->
-               </div>
-               <!-- /.tech-package -->
-               <div class="tech-package">
-                   <div class="head">
-                        <div class="img-wrapper">
-                            <img src="<?php bloginfo('template_url') ?>/src/img/creating/time-70.svg" alt="time-70">
-                        </div>
-                        <div class="title">50-100 часов</div>
-                   </div>
-                   <!-- /.head -->
-                   <div class="foot">
-                        <div class="price">800 р./ч.</div>
-                        <a href="#popup-tech-time-100" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
-                   </div>
-                   <!-- /.body -->
-               </div>
-               <!-- /.tech-package -->
-               <div class="tech-package">
-                   <div class="head">
-                        <div class="img-wrapper">
-                            <img src="<?php bloginfo('template_url') ?>/src/img/creating/time-100.svg" alt="time-100">
-                        </div>
-                        <div class="title">Более 100 часов</div>
-                   </div>
-                   <!-- /.head -->
-                   <div class="foot">
-                        <div class="price">700 р./ч.</div>
-                        <a href="#popup-tech-time-over100" rel="modal:open" class="btn btn-primary btn-opacity">Заказать</a>
-                   </div>
-                   <!-- /.body -->
-               </div>
-               <!-- /.tech-package -->
-           </div>
-           <!-- /.tech-packages -->
             
         </div>
     </div>
@@ -326,116 +260,5 @@ get_header();
     </div>
 </div>
 <!-- /PopUp -->
-<!-- PopUp -->
-<div id="popup-tech-time-20" class="overlay">
-    <div class="popup">
-        <?php get_template_part('templates/parts/modal-head') ?>
-        
-        <div class="content">
-            <div class="title">
-                <div class="h">Первые 20 часов работ</div>
-                <div class="sub-h">Оставьте свои контакты, что бы мы могли связаться с Вами</div>
-            </div>
-            <form action="javascript:" onsubmit="callHandler('#tech-time-20-form')" id="tech-time-20-form">
-                <input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
-                <input type="hidden" name="form" value="Первые 20 часов работ">
-                <div class="input-wrapper icon i-user">
-                    <input type="text" placeholder="Введите ваше имя" name="user_name" required>
-                </div>
-                <div class="input-wrapper icon i-phone">
-                    <input type="text" placeholder="Ваш № телефона" name="user_phone" class="phone-mask" required>
-                </div>
-                <div class="input-wrapper icon i-mail">
-                    <input type="mail" placeholder="Введите ваш e-mail">
-                </div>
-                <button class="btn btn-form btn-shadow">Оставить заявку</button>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- /PopUp -->
-<!-- PopUp -->
-<div id="popup-tech-time-50" class="overlay">
-    <div class="popup">
-        <?php get_template_part('templates/parts/modal-head') ?>
-        
-        <div class="content">
-            <div class="title">
-                <div class="h">20-50 часов обслуживания</div>
-                <div class="sub-h">Оставьте свои контакты, что бы мы могли связаться с Вами</div>
-            </div>
-            <form action="javascript:" onsubmit="callHandler('#tech-time-50-form')" id="tech-time-50-form">
-                <input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
-                <input type="hidden" name="form" value="20-50 часов обслуживания">
-                <div class="input-wrapper icon i-user">
-                    <input type="text" placeholder="Введите ваше имя" name="user_name" required>
-                </div>
-                <div class="input-wrapper icon i-phone">
-                    <input type="text" placeholder="Ваш № телефона" name="user_phone" class="phone-mask" required>
-                </div>
-                <div class="input-wrapper icon i-mail">
-                    <input type="mail" placeholder="Введите ваш e-mail">
-                </div>
-                <button class="btn btn-form btn-shadow">Оставить заявку</button>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- /PopUp -->
-<!-- PopUp -->
-<div id="popup-tech-time-100" class="overlay">
-    <div class="popup">
-        <?php get_template_part('templates/parts/modal-head') ?>
-        
-        <div class="content">
-            <div class="title">
-                <div class="h">50-100 часов обслуживания</div>
-                <div class="sub-h">Оставьте свои контакты, что бы мы могли связаться с Вами</div>
-            </div>
-            <form action="javascript:" onsubmit="callHandler('#tech-time-100-form')" id="tech-time-100-form">
-                <input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
-                <input type="hidden" name="form" value="50-100 часов обслуживания">
-                <div class="input-wrapper icon i-user">
-                    <input type="text" placeholder="Введите ваше имя" name="user_name" required>
-                </div>
-                <div class="input-wrapper icon i-phone">
-                    <input type="text" placeholder="Ваш № телефона" name="user_phone" class="phone-mask" required>
-                </div>
-                <div class="input-wrapper icon i-mail">
-                    <input type="mail" placeholder="Введите ваш e-mail">
-                </div>
-                <button class="btn btn-form btn-shadow">Оставить заявку</button>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- /PopUp -->
-<!-- PopUp -->
-<div id="popup-tech-time-over100" class="overlay">
-    <div class="popup">
-        <?php get_template_part('templates/parts/modal-head') ?>
-        
-        <div class="content">
-            <div class="title">
-                <div class="h">Более 100 часов обслуживания</div>
-                <div class="sub-h">Оставьте свои контакты, что бы мы могли связаться с Вами</div>
-            </div>
-            <form action="javascript:" onsubmit="callHandler('#tech-time-over100-form')" id="tech-time-over100-form">
-                <input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] ?>">
-                <input type="hidden" name="form" value="Более 100 часов обслуживания">
-                <div class="input-wrapper icon i-user">
-                    <input type="text" placeholder="Введите ваше имя" name="user_name" required>
-                </div>
-                <div class="input-wrapper icon i-phone">
-                    <input type="text" placeholder="Ваш № телефона" name="user_phone" class="phone-mask" required>
-                </div>
-                <div class="input-wrapper icon i-mail">
-                    <input type="mail" placeholder="Введите ваш e-mail">
-                </div>
-                <button class="btn btn-form btn-shadow">Оставить заявку</button>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- /PopUp -->
+
 <?php get_footer(); ?>

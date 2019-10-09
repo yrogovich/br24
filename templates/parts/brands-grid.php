@@ -4,26 +4,25 @@
         "agronovia",
         "rosstrans",
         "gefest",
-        "bosh",
-        "avon",
+        "sber",
+        "ford",
         "tricolor",
-        "belinka",
+         "bosh",
         "glonas",
         "rancio",
         "citroen",
-        "aurora",
+         "avon",
         "limadas",
         "markizy",
-        "neva",
         "alfa",
         "germes",
         "lord",
-        "divi",
+        "aurora",
         "gid",
         "odv",
         "cp",
         "palas",
-        "art",
+        "belinka",
         "aresa-logo",
         "klimolog",
         "hdlt",
@@ -38,7 +37,7 @@
         "avtospas",
         "clickmebel"
     ]; 
-    for($i = 0; $i <= 36; $i++) : ?>
+    for($i = 0; $i <= 35; $i++) : ?>
     <div class="brand brand-<?=$i+1?>">
         <img data-src="<?php bloginfo('template_url') ?>/src/img/brands/<?=$brandName[$i]?>.png" alt="<?=$brandName[$i]?>" class="lazy">
     </div>

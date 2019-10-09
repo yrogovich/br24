@@ -3,6 +3,7 @@
      * When DOM is ready
      */
     $(document).ready(function(){
+
         SmoothScroll({ 
             animationTime: 800,
             stepSize: 85 

@@ -30,25 +30,33 @@
 }
 .section {
     position: relative;
-    //z-index: 1;
+    z-index: 1;
     padding-top: 4.4rem;
     padding-bottom: 5rem;
 }
 
 .translateYCenter {
     transform: none;
-    @include sm(transform, translateY(5rem));
+    
+    @media (min-height: 800px) {
+        transform: translateY(5rem);
+    }
+}
+#world-clients,
+#stock {
+    transition: 1s cubic-bezier(0.42, 0, 0.42, 1.54);
+    &.animationFadeIn{
+        @media (min-width: $md) {
+            transform: translateY(19rem);
+            opacity: 0;
+        }
+    }
 }
 
 #world-clients {
     //display: none;
-    transition: 1s cubic-bezier(0.42, 0, 0.42, 1.54);
-    &.animationFadeIn{
-        @media (min-width: $md) {
-            transform: translateY(0);
-            opacity: 0;
-        }
-    }
+    
+    
 
     background: $white;
     box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
@@ -90,14 +98,12 @@
         background: linear-gradient(90deg, #038afe, #245ad4);
         box-sizing: border-box;
         width: 100%;
-        border: 5px solid $primary;
-        border-radius: 20px;
 
         @include row-flex();
         margin-left: 0;
         margin-right: 0;
         align-items: center;
-        box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 
         .col-left {
             @include col();
@@ -109,9 +115,6 @@
             @include sm(display, block);
 
             margin-left: 0;
-            img, picture {
-                border-radius: 20px 0 0 20px;
-            }
         }
         .col-right {
             @include col();
@@ -319,15 +322,12 @@
 
         .text-wrapper {
             padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 13rem;
             .title {
                 font-size: 1.3rem;
                 font-weight: 700;
-                margin: 1rem 0 1.5rem;
-            }
-            .hr {
-                width: 100%;
-                height: 1px;
-                background-color: #ebebeb;
                 margin: 1rem 0 1.5rem;
             }
             .gray-text {
@@ -336,9 +336,14 @@
                 font-size: 1.2rem;
             }
             .pair {
+                border-top: 1px solid #ebebeb;
+                margin-top: 1rem;
+                padding-top: 1.5rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
+                margin-bottom: 2rem;
+                margin-top: auto;
             }
             .link {
                 color: $primary;
@@ -555,16 +560,17 @@
         height: 100%;
     }
     .brand-1,
-    .brand-16,
-    .brand-21,
-    .brand-26 {
+    .brand-15,
+    .brand-20,
+    .brand-25 {
         grid-column-start: 1;
         grid-column-end: 3;
     }
     .brand-5,
-    .brand-20,
-    .brand-25,
-    .brand-30 {
+    .brand-14,
+    .brand-19,
+    .brand-24,
+    .brand-29 {
         grid-column-start: 6;
         grid-column-end: 8;
     }
@@ -636,10 +642,10 @@
 }
 .contacts-card {
     box-sizing: border-box;
-    border: 5px solid $primary;
-    border-radius: 20px;
+    // border: 5px solid $primary;
+    // border-radius: 20px;
     background: $white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.15);
     min-height: 594px;
 
     @include row-flex();
@@ -691,9 +697,27 @@
             margin: 1rem 4rem 2rem;
         }
         .phone-link {
-            display: block;
+            display: flex;
+            align-items: center;
             font-size: 1.6rem;
             text-decoration: none;
+            &.by:before,
+            &.ru:before {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                content: '';
+                margin-right: 1.5rem;
+                width: 2rem;
+                height: 2rem;
+                display: inline-block;
+            }
+            &.by:before {
+                background-image: url('../img/flags/Belarus.png');
+            }
+            &.ru:before {
+                background-image: url('../img/flags/Russia.png');
+            }
         }
         .btn-lg {
             display: block;

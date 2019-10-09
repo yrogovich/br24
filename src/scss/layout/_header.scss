@@ -15,7 +15,10 @@ header {
 }
 .hero {
     @include row-flex();
-    @include lg(padding-top, 11rem);
+    @include xl(padding-top, 11vh);
+    @media (max-height: 800px) {
+        padding-top: 10vh;
+    }
 
     text-align: center;
     @include lg(text-align, left);

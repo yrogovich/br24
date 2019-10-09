@@ -16,7 +16,8 @@ get_header();
                     <div class="title icon-map">Адрес</div>
                     <p class="margin">Беларусь, г. Гомель, ул. Советская, 61. Офис 206</p>
                     <div class="title icon-phone">Телефон</div>
-                    <a class="margin phone-link" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
+                    <a class="margin phone-link by" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
+                    <a class="margin phone-link ru" href="tel:<?=PHONE_RUS_HREF?>"><?=PHONE_RUS?></a>
                     <div class="hr"></div>
 
                     <p class="bold">Остались вопросы?</p>
@@ -32,7 +33,7 @@ get_header();
                 </div>
                 <div class="col-right">
                     <div id="map">
-                    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac7d87e8430b4178367d02f242d76645b79b73607df715017ad24b72553e52d29&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac7d87e8430b4178367d02f242d76645b79b73607df715017ad24b72553e52d29&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
                     </div>
                 </div>
             </div>

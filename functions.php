@@ -73,6 +73,7 @@ if ( ! function_exists( 'br24_theme_setup' ) ) :
 		// 	'flex-width'  => true,
 		// 	'flex-height' => true,
 		// ) );
+		add_image_size( 'custom-thumb', 340, 220 );
 	}
 endif;
 add_action( 'after_setup_theme', 'br24_theme_setup' );

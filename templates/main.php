@@ -33,8 +33,8 @@ get_header();
                     </div>
                     <!-- /.main-feature -->
                     <div class="main-feature">
-                        <div class="digit"><span class="count" data-count="10">0</span></div>
-                        <span class="text">10 профессионалов в команде</span>
+                        <div class="digit"><span class="count" data-count="12">0</span></div>
+                        <span class="text">12 профессионалов в команде</span>
                     </div>
                     <!-- /.main-feature -->
                 </div>
@@ -57,33 +57,6 @@ get_header();
         </div>
     </div>
 </header>
-
-<!-- <div class="section sticky-section" id="stock">
-    <div class="container">
-        <div class="h2">Акция</div>
-        <div class="banner-container">           
-            <p class="warning-text">Это нельзя пропустить!</p>
-            <div class="banner">
-                <img class="bage" src="<?php bloginfo("template_url") ?>/src/img/main-page/flag.webp" alt="Акция месяца">
-                <div class="col-left">
-                    <picture>
-						<source type="image/webp" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/banner.webp">
-						<source type="image/png" srcset="<?php bloginfo('template_url') ?>/src/img/main-page/banner.png">
-						<img class="lazy" style="margin-bottom: -4px;" data-src="<?php bloginfo('template_url') ?>/src/img/main-page/banner.webp" alt="1 месяц SEO продвижения">
-					</picture>
-                </div>
-                <div class="col-right">
-                    <p class="banner-header">
-                    1 месяц SEO продвижения в подарок
-                    </p>
-                    <p class="banner-text">Оставьте заявку, что бы мы забронировали за вами бонус. Акция действует до 1 <?php echo MONTH[date('n')]; ?> 2019г.</p>
-                    <a href="#popup-request" rel="modal:open" class="btn btn-primary btn-lg i-gift">Забронировать бонус</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- /#stock.section -->
 
 <div class="container">
     <div class="sticky-section animationFadeIn" id="world-clients">
@@ -166,7 +139,7 @@ get_header();
     <div class="container">
         <div class="h3">Коротко о нашей компании</div>
         <div class="primary-text">Компания «БИЗНЕС РОСТ» профессионально занимается продвижением и рекламой с 2008 года.</div>
-        <p>Мы готовы предложить максимально эффективные решения в области интернет продаж каждому клиенту, сохраняя при этом выгодную для клиентов стоимость услуг. Мы работаем профессионально, четко и очень быстро.  Мы ценим наших клиентов и готовы сотрудничать с представителями крупного и малого бизнеса. <strong>У нас можно заказать лендинг.</strong> Свяжитесь с нами прямо сейчас, доверьте рост ваших продаж профессионалам!</p>
+        <p>Мы готовы предложить максимально эффективные решения в области интернет продаж каждому клиенту, сохраняя при этом выгодную для клиентов стоимость услуг. Мы работаем профессионально, четко и очень быстро.  Мы ценим наших клиентов и готовы сотрудничать с представителями крупного и малого бизнеса. Свяжитесь с нами прямо сейчас, доверьте рост ваших продаж профессионалам!</p>
 
         <div class="main-features">
             <div class="main-feature">
@@ -180,8 +153,8 @@ get_header();
             </div>
             <!-- /.main-feature -->
             <div class="main-feature">
-                <div class="digit"><span class="count" data-count="10">0</span></div>
-                <span class="text">10 профессионалов в команде</span>
+                <div class="digit"><span class="count" data-count="12">0</span></div>
+                <span class="text">12 профессионалов в команде</span>
             </div>
             <!-- /.main-feature -->
         </div>
@@ -211,7 +184,8 @@ get_header();
                 <div class="title icon-map">Адрес</div>
                 <p class="margin">Беларусь, г. Гомель, ул. Советская, 61. Офис 206</p>
                 <div class="title icon-phone">Телефон</div>
-                <a class="margin phone-link" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
+                <a class="margin phone-link by" href="tel:<?=PHONE_HREF?>"><?=PHONE?></a>
+                <a class="margin phone-link ru" href="tel:<?=PHONE_RUS_HREF?>"><?=PHONE_RUS?></a>
                 <div class="hr"></div>
 
                 <p class="bold">Остались вопросы?</p>

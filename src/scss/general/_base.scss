@@ -149,6 +149,10 @@ h4,.h4 {
 	margin-bottom: 1rem;
 }
 
+a {
+	color: $primary;
+}
+
 .row {
 	@include row-flex();
 }
@@ -280,21 +284,27 @@ ul.flags {
 		&:before {
 			display: inline-block;
 			margin-right: 1.5rem;
+			width: 2rem;
+			height: 2rem;
+			content: '';
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 		&.by:before {
-			content: url('../img/flags/Belarus.png');
+			background-image: url('../img/flags/Belarus.png');
 		}
 		&.en:before {
-			content: url('../img/flags/England.png');
+			background-image: url('../img/flags/England.png');
 		}
 		&.ru:before {
-			content: url('../img/flags/Russia.png');
+			background-image: url('../img/flags/Russia.png');
 		}
 		&.cz:before {
-			content: url('../img/flags/Czechia.png');
+			background-image: url('../img/flags/Czechia.png');
 		}
 		&.kz:before {
-			content: url('../img/flags/Kazakhstan.png');
+			background-image: url('../img/flags/Kazakhstan.png');
 		}
 	}
 }
@@ -320,13 +330,15 @@ ol.style-1{
 		position: relative;
 		display: flex;
 		align-items: center;
-		@include sm(margin-bottom, 0);
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 
 		.block {
+			position: relative;
 			font-size: 1.3rem;
 			color: $gray-text;
 			text-align: left;
+			margin-left: 2rem;
+			
 		}
 		.title {
 			font-size: 1.6rem;
@@ -335,55 +347,42 @@ ol.style-1{
 			margin-bottom: 1rem;
 			color: $black;
 			position: relative;
-			&:before {
-				content: url('../img/seo-page/arrow-logo.svg');
-				position: absolute;
-				left: -1.8rem;
-				top: 50%;
-				transform: translate(-100%,-50%);
-				animation: blink 6s infinite;
-			}
+			
 		}
-		&:first-child .title:before{
+		&:first-child:before{
 			animation-delay: 0s;
 		}
-		&:nth-child(2) .title:before{
+		&:nth-child(2):before{
 			animation-delay: .5s;
 		}
-		&:nth-child(3) .title:before{
+		&:nth-child(3):before{
 			animation-delay: 1s;
 		}
-		&:nth-child(4) .title:before{
+		&:nth-child(4):before{
 			animation-delay: 1.5s;
 		}
-		&:nth-child(5) .title:before{
+		&:nth-child(5):before{
 			animation-delay: 2s;
 		}
 		&:before {
-			counter-increment: count;   
-			content: counter(count);
+			content: url('../img/seo-page/arrow-logo.svg');
 			display: inline-block;
-
-			@include sm(width, 6rem);
-			width: 9rem;
-
-			font-size: 10rem;
-			font-weight: 700;
-			opacity: .3;
-			text-align: center;
-			color: $primary;
-			margin-right: 2rem;
+			animation: blink 6s infinite;
+			transform: scale(1.1);
 		}
 	}
 	@keyframes blink {
 		0%{
-			filter: brightness(1)
+			filter: brightness(1);
+			transform: scale(1.1);
 		}
 		40% {
 			filter: brightness(1.6);
+			transform: scale(1.3);
 		}
 		70% {
-			filter: brightness(1)
+			filter: brightness(1);
+			transform: scale(1.1);
 		}
 	}
 }
@@ -442,3 +441,17 @@ ol.style-1{
 	}
 }
 
+.sl-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    opacity: .9;
+    display: none;
+    z-index: 1035;
+}
+.sl-wrapper .sl-image img {
+	box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}

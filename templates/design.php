@@ -68,19 +68,19 @@ get_header();
                 <!-- /.head -->
 
                 <div class="body">
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/FXLuminare.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/FXLuminare.pdf" target="blank" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/kit/thumbs/FXLuminare.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/sell-flat.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/sell-flat.pdf" target="blank" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/kit/thumbs/sell-flat.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/225000.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/225000.pdf" target="blank" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/kit/thumbs/225000.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/money.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/kit/money.pdf" target="blank" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/kit/thumbs/money.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
@@ -106,35 +106,35 @@ get_header();
                 <!-- /.head -->
 
                 <div class="body">
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/alkana.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/alkana.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/alkana.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/balash.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/balash.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/balash.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/markizy.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/markizy.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/markizy.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/klimolog.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/klimolog.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/klimolog.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/kitauto.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/kitauto.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/kitauto.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/portfel.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/portfel.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/portfel.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/oboitown.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/oboitown.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/oboitown.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/r-com.png" class="card">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/logo/big/r-com.png" class="card">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/logo/r-com.png" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
@@ -160,20 +160,20 @@ get_header();
                 <!-- /.head -->
 
                 <div class="body">
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/econom.jpg" class="card wide">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/econom.jpg" class="lazy" alt="photo">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/big/bosh.jpg" class="card wide">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/bosh.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->    
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/pich.jpg" class="card wide">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/pich.jpg" class="lazy" alt="photo">
-                    </a>
-                    <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/bacauto.jpg" class="card wide">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/bacauto.jpg" class="lazy" alt="photo">
-                    </a>
-                    <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/rancho.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/big/rancho.jpg" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/rancho.jpg" class="lazy" alt="photo">
+                    </a>
+                    <!-- /.card -->
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/big/germes.jpg" class="card wide">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/germes.jpg" class="lazy" alt="photo">
+                    </a>
+                    <!-- /.card -->
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/outad/big/econom.jpg" class="card wide">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/outad/econom.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
                 </div>
@@ -198,19 +198,19 @@ get_header();
                 <!-- /.head -->
 
                 <div class="body">
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/pack-1.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/big/pack-1.jpg" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/package/pack-1.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->    
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/pack-2.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/big/pack-2.jpg" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/package/pack-2.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/pack-3.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/big/pack-3.jpg" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/package/pack-3.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/pack-4.jpg" class="card wide">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/package/big/pack-4.jpg" class="card wide">
                         <img data-src="<?php bloginfo('template_url') ?>/src/img/design/package/pack-4.jpg" class="lazy" alt="photo">
                     </a>
                     <!-- /.card -->
@@ -238,35 +238,35 @@ get_header();
 
                 <div class="body">
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-1.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-1.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-1.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-2.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-2.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-2.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
-                    <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-3.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-3.jpg" class="lazy" alt="photo">
+                    <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-3.png" class="card" >
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-3.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-4.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-4.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-4.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-5.jpg" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-5.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-5.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-6.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-6.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-6.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-7.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-7.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-7.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                     <a href="<?php bloginfo('template_url') ?>/src/img/design/web/web-8.png" class="card">
-                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-8.jpg" class="lazy" alt="photo">
+                        <img data-src="<?php bloginfo('template_url') ?>/src/img/design/web/thumbs/web-8.jpg" class="lazy" alt="photo" title="Дважды намите по изображению для увеличения">
                     </a>
                     <!-- /.card -->
                 </div>
@@ -446,7 +446,10 @@ get_header();
         $(document).ready(function(){
             //lightbox
             if($('.body .card')) {
-                $('.body .card').simpleLightbox();
+                $('.body .card').simpleLightbox({
+                    doubleTapZoom: 6,
+                    
+                });
             }
         });
     })(jQuery); // <----- jQuery no conflict wrapper

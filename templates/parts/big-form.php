@@ -28,7 +28,7 @@
                     
                     <button class="btn btn-form btn-shadow">Отправить на оценку</button>
                     <div class="privacy">
-                        <input type="checkbox" id="privacy_checkbox" required>
+                        <input type="checkbox" id="privacy_checkbox" checked required>
                         <label class="small-text" for="privacy_checkbox">Я ознакомлен с <a href="<?php echo get_home_url(null, 'privacy-policy/') ?>" class="link">Политикой конфиденциальности</a> и даю согласие на сбор, обработку и хранение
 моих персональных данных.</label>
                     </div>
