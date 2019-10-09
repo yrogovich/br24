@@ -90,6 +90,11 @@
             background: url('../img/map.png') center center / contain no-repeat;
         }
     }
+    .btn{
+        @media (max-width: $md) {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .banner-container {
@@ -225,11 +230,13 @@
 
                 img {
                     width: 15rem;
-                    height: 15rem;
+                    height: 10rem;
                     transition: .5s cubic-bezier(0.42, 0, 0.14, 2.29);
                     object-fit: contain;
                     margin: 10px 0;
+                    @include sm(height, 15rem);
                 }
+                
             }
             .col-right {
                 @include col();
@@ -420,8 +427,9 @@
             margin-bottom: 2rem;
             border-bottom: 1px solid #7c9dbe;
             .title {
-                font-size: 1.6rem;
+                font-size: 1.2rem;
                 font-weight: 700;
+                @include sm(font-size, 1.6rem);
             }
             .navigation {
                 display: flex;
@@ -473,6 +481,14 @@
         .paragraph {
             display: grid;
             grid-template-columns: 1fr 6fr;
+            @media (max-width: $md) {
+                grid-template-columns: 1fr;
+             }
+            img {
+                @media (max-width: $md) {
+                   display: none;
+                }
+            }
         }
     }
     #slider {
@@ -508,6 +524,9 @@
         .text {
             background-color: $white;
             padding: 2rem 3rem 3rem;
+            @media (max-width: $md) {
+                padding: 2rem 0rem 1rem;
+            }
             .title {
                 font-size: 1.6rem;
                 font-weight: 700;
@@ -659,11 +678,17 @@
         @include size-lg(6);
     }
     .col-left {
-        padding: 4rem 3rem;
+        padding: 4rem 1rem;
+        @include sm(padding, 4rem 3rem);
         .title {
             color: $primary;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
+            @include sm(font-size, 2.2rem);
+        }
+        .btn-lg {
+            font-size: 1.4rem;
+            @include sm(font-size, 1.7rem);
         }
         .hr {
             width: 100%;
@@ -725,6 +750,26 @@
             margin: 2.7rem 0;
             @include xl(max-width, 278px);
         }
+        @media (max-width: 330px) {
+            .title {
+                font-size: 1.6rem;
+            }
+            .subtitile, p {
+                font-size: 1.2rem;
+            }
+            .btn-lg {
+                padding: 2.5rem 2rem 2.5rem 2rem;
+                &:after {
+                    display: none;
+                }
+            }
+            .phone-link {
+                font-size: 1.4rem;
+                &:before {
+                    display: none!important;
+                }
+            }
+        }
     }
     .col-right {
         margin: 0;
@@ -752,6 +797,23 @@
             }
             &:active {
                 filter: brightness(95%);
+            }
+        }
+        @media (max-width: $md) {
+            .btn {
+                font-size: 0;
+                width: unset;
+                padding: 1.5rem 1.5rem;
+                border-radius: 50%;
+                &:before {
+                    font-size: 2.2rem;
+                    margin-right: 0;
+                    width: 2rem;
+                    height: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }

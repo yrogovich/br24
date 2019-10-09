@@ -34,6 +34,7 @@ p {
 }
 
 .logo {
+	max-width: 100%;
 	width: 25.6rem;
 	max-height: 5.2rem;
 	text-decoration: none;
@@ -55,7 +56,7 @@ p {
 	&:hover {
 		filter: saturate(2.6);
 	}
-	@media (max-width: 370px) {
+	@media (max-width: 400px) {
 		width: 20rem;
 		&-text {
 			display: none;

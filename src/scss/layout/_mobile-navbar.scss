@@ -19,8 +19,8 @@
     .menu {
         li {
             border-bottom: 1px solid #19b0c7;
-            margin: 3.8vh 0;
-            padding: 0 0 3.8vh 0;
+            margin: 3vh 0;
+            padding: 0 0 3vh 0;
             &:last-child {
                 border-bottom: none;
             }
@@ -29,12 +29,17 @@
             text-decoration: none;
             color: $white;
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
     }
     .mobile-contacts {
         background-color: #fff;
         box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+        text-align: center;
+        .phone-link {
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
         .container {
             padding: 1.5rem;
         }
@@ -54,8 +59,24 @@
     }
     .social-links {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin: 0 -1rem;
+        .btn {
+            font-size: 0;
+            width: unset;
+            margin: 0 1rem;
+            padding: 1.5rem 1.5rem;
+            border-radius: 50%;
+            &:before {
+                font-size: 2.2rem;
+                margin-right: 0;
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
     .btn-viber,
     .btn-whatsapp,

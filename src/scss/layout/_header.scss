@@ -19,6 +19,9 @@ header {
     @media (max-height: 800px) {
         padding-top: 10vh;
     }
+    @media (max-height: 750px) {
+        padding-top: 2vh;
+    }
 
     text-align: center;
     @include lg(text-align, left);

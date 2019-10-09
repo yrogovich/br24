@@ -164,10 +164,11 @@ function disable_wp_emojicons() {
 add_action( 'init', 'disable_wp_emojicons' );
 
 function theme_name_scripts() {
-    if( ! wp_is_mobile() ) {
+    
 		if(is_front_page() || is_page('reviews') ) {
 			wp_enqueue_script('waterwheelCarousel', get_template_directory_uri() . '/src/libs/jquery.waterwheelCarousel.min.js' , 'jQuery' , false, true );
 		}
+	if( ! wp_is_mobile() ) {
 		wp_enqueue_script('handle', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js', 'jQuery', false, true);
     }
 }
