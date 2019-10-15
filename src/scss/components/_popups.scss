@@ -8,7 +8,7 @@
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-    z-index: 100;
+    z-index: 1000;
     &.active {
         visibility: visible;
         opacity: 1;
